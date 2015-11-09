@@ -4,8 +4,6 @@ FileList p;
 String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
 int imgNum = 0;
 boolean pmousePressed=false;
-//boolean loaded=false;
-
 
 //画像をボタン化したい
 ImButton[] thumbnailButton;
@@ -18,15 +16,11 @@ void setup(){
 }
 void draw(){
 	//各種ボタン描画
-	//	if(loaded){
 	for (int i=0; i<thumbnailButton.length; i++){
 		thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
 	}
-
-	//	thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
-
 	update();	
-	//	}
+	pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
 
 }
 
@@ -52,11 +46,9 @@ void console(String[] fileArray){
 				g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
 				g.resize(0,100);//画像のリサイズ
 				thumbnailButton[imgNum]=new ImButton(g, (width-g.width)/2, imgNum*100);
-				//				thumbnailButton[imgNum].draw(mouseX, mouseY);
 				imgNum++;
 			}
 		}
-		//		loaded = true;
 	} else{
 		println("この階層には何もありません");
 	}
@@ -64,5 +56,11 @@ void console(String[] fileArray){
 
 public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
 	//各種ボタンが押された時の処理
-	noLoop();
+	for (int i=0; i<thumbnailButton.length; i++) {
+		thumbnailButton[i].update(mouseX-getX(), mouseY-getY());
+		if (thumbnailButton[i].isPressed) {
+			thumbnailButton[i].setSelected(false);
+			println(i+" : 押されました");
+		}
+	}
 }
