@@ -2,6 +2,7 @@
 
 FileList p;
 String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
+int imgNum = 0;
 
 void setup(){
 	size(500,500);
@@ -18,15 +19,18 @@ void console(String[] fileArray){
 	if (fileArray != null) {
 		for(int i = 0; i < fileArray.length; i++) {
 			String[] m = match(fileArray[i], ".png");
-			if(m != null){//検索結果あり
-				println(fileArray[i]);
+			if(m != null){//もし画像ならば
+				//println(fileArray[i]);
 				//TODO : サムネイルを表示する
 				PImage img;
 				img = loadImage(path+"/"+fileArray[i]);
-				image(img, 0, 0);
-				
+				img.resize(0,100);
+				//				image(img, 0, imgNum*100, img.width/4, img.height/4);
+				image(img, (width-img.width)/2, imgNum*100);
+				imgNum++;
 			}else{//不一致
 
+				
 			}
 		}
 	} else{
