@@ -1,4 +1,4 @@
-//
+//processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
 
 private PFrame data_frame;
 private SecondApplet second_app;
@@ -43,17 +43,15 @@ String getParentFilePath(String path, int n) {//n階層上のファイルパス�
 void setup() {
 	animFrame=frameset=0;
 	animation=false;
-
-	//データ画面
-//	second_app = new SecondApplet();
-//	data_frame = new PFrame(second_app);
-//	data_frame.setTitle("2nd frame");
-//	data_frame.setLocation(200, 200);
+	
+	println("aaa");
+	println("ccc");
 
 	oldToolNumber=0;
 	context = new SimpleOpenNI(this);//カメラ更新用
 	context.setMirror(false);//鏡では表示しない
 
+	println("vvv");
 	frame.setTitle("DKBK");
 	size(int(640*screenZoom), int(480*screenZoom), P3D);
 
@@ -62,7 +60,10 @@ void setup() {
 
 	FilePath1=dataPath("")+"/todai_horiken7.dsd";
 
+	println("aaa");
 	tool=new Tool();//ツールバー
+	println("bbb");
+
 	take=new TakeShot(this);//テイクショット
 
 	//初期データの読み込み
@@ -79,6 +80,15 @@ void setup() {
 	camera(width/2, height/2, z0, width/2, height/2, 0, 0, 1, 0);
 
 	pmousePressed=false;
+	
+	
+
+	//データ画面
+	second_app = new SecondApplet();
+	data_frame = new PFrame(second_app);
+	//	data_frame.setTitle("2nd frame");
+	//	data_frame.setLocation(1100, 200);
+	
 }
 
 void draw() {

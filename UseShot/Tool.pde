@@ -151,6 +151,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 
     //アニメーションのモードを設定
     animMode=1;
+	  println("ツールバーおわり");
   }
 
   public void update() {
