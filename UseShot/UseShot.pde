@@ -43,7 +43,7 @@ String getParentFilePath(String path, int n) {//n階層上のファイルパス�
 void setup() {
 	animFrame=frameset=0;
 	animation=false;
-	
+
 	println("aaa");
 	println("ccc");
 
@@ -80,15 +80,15 @@ void setup() {
 	camera(width/2, height/2, z0, width/2, height/2, 0, 0, 1, 0);
 
 	pmousePressed=false;
-	
-	
+
+
 
 	//データ画面
 	second_app = new SecondApplet();
 	data_frame = new PFrame(second_app);
-	//	data_frame.setTitle("2nd frame");
-	//	data_frame.setLocation(1100, 200);
-	
+	data_frame.setTitle("data");
+	data_frame.setLocation(1200, 200);
+
 }
 
 void draw() {
@@ -450,16 +450,103 @@ public void printPCD() {
 	println("end : printPCD");
 	return;
 }
+void mouseMoved() {//チェック
+	MainFrame=true;
+}
+
+
+boolean MainFrame = true;//二画面のうちどちらにいるか
+ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();;//サムネイルボタン
 
 //データ画面
 class SecondApplet extends PApplet {
+	//サムネイル表示用
+	String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
+	FileList p;//フォルダの中身一覧
+	int imgNum = 0;//画像数
+	float scrollY=0;//スクロール量
+
 	void setup() {
-		size( 200, 200 );
+		size( 200, 600 );
+		p = new FileList(path);
+		println("p "+p.getFileList().length);
+		console(p.getFileList());
 	}
 
 	void draw() {
 		background(255);
 		fill(255, 0, 0);
 		ellipse( mouseX, mouseY, 50, 50 );
+
+		//各種ボタン描画
+		//ホイール位置に合わせて描画位置を移動
+		pushMatrix();
+		translate(0,scrollY);
+		for (int i=0; i<thumbnailButton.size(); i++){
+			//			thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
+			rect(thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());//ここの描画先を変更したい
+			image(thumbnailButton.get(i).getImg(), thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());
+		}
+		popMatrix();
+
+		update();
+		pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
+
+
+	}
+
+	void console(String[] fileArray){
+		if (fileArray != null) {
+			//画像の枚数をカウントする
+			for(int i = 0; i < fileArray.length; i++) {
+				if(match(fileArray[i], ".png") != null)
+					imgNum++;
+				//TODO : nullだった時(画像じゃない時)はその要素を配列から消しておきたい 
+			}
+			//画像付きボタンを作成する
+//			thumbnailButton = new ImButton[imgNum];
+
+			imgNum=0;
+			//画像だった時にサムネイルを作成する
+			PImage g;
+			for(int i = 0; i < fileArray.length; i++) {//二度目
+				if(match(fileArray[i], ".png") != null){
+					//画像付きボタンを作成する
+					g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
+					g.resize(0,100);//画像のリサイズ
+					thumbnailButton.add(new ImButton(g, (width-g.width)/2, imgNum*100));
+					imgNum++;
+				}
+			}
+		} else{
+			println("この階層には何もありません");
+		}
+	}
+
+	public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
+		//各種ボタンが押された時の処理
+		for (int i=0; i<thumbnailButton.size(); i++) {
+			if(MainFrame)//この画面じゃないならやらない
+				break;
+			thumbnailButton.get(i).update(mouseX-getX(), mouseY-getY()-scrollY);
+			if (thumbnailButton.get(i).isMouseOver&& !pmousePressed&&mousePressed) {
+				thumbnailButton.get(i).setSelected(false);
+				println(i+" : 押されました");
+			}
+		}
+	}
+
+	//マウスホイールによって画面をスクロールする
+	void mouseWheel(MouseEvent event) {
+		float e = event.getCount();
+		scrollY=scrollY+e;
+	}
+
+	void mouseMoved() {//チェック
+		MainFrame=false;
+	}
+
+	boolean buttonMouseOver (){
+		return true;
 	}
 }

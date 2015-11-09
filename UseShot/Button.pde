@@ -62,6 +62,10 @@ public class ImButton extends Button {//イメージ付きボタン
       strokeWeight(1);
     }
   }
+	public PImage getImg(){
+		return img;
+	}
+
 }
 
 public class Button extends Obj {//ボタン
