@@ -22,6 +22,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
   private boolean moveMode;//移動ホウホウ,trueのときは回転移
 
   private int clicknum=0;//クリック回数の記録
+  private String dataPath="data/";//クリック回数の記録
 
   private char keyConfig[];
   float Y;//ツールバーの高さ
@@ -52,14 +53,14 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 
     Y=moveBar.getH()+5;
     for (int i=0; i<editButton.length; i++) {
-      g=loadImage("icon-e"+i+".png");
+      g=loadImage(dataPath+"icon-e"+i+".png");
       editButton[i]=new ImButton(g, 6+26*int(i%2), 26*int(i/2)+Y, 24, 24);
     }
 
     //カラーボタン
     Y+=26*ceil(editButton.length/2.)+13;
     for (int i=0; i<colorButton.length; i++) {
-      g=loadImage("icon-c"+i+".png");
+      g=loadImage(dataPath+"icon-c"+i+".png");
       penColor[i]=g.get(0, 0);
       colorButton[i]=new ImButton(g, 6+26*int(i%2), 26*int(i/2)+Y, 24, 24);
     }
@@ -69,7 +70,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 
     //太さボタン
     for (int i=0; i<thicknessButton.length; i++) {
-      g=loadImage("icon-thic"+(i)+".png");
+      g=loadImage(dataPath+"icon-thic"+(i)+".png");
       thicknessButton[i]=new ImButton(g, 6, 17*(i)+Y, 48, 15);
     }
     thicknessButton[0].setSelected(true);//初期状態で選択するボタン    
@@ -77,14 +78,14 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 
     //ツールボタン
     for (int i=0; i<toolButton.length; i++) {
-      g=loadImage("icon-"+nf(i+3, 2, 0)+".png");
+      g=loadImage(dataPath+"icon-"+nf(i+3, 2, 0)+".png");
       if (i==3||i==4) {
         println(i+"ツールバーの隙間をうめる");
         toolButton[i]=new ImButton(g, 6, 50*(i-2)+Y, 48, 48);//画像の変化がないボタン
       } else {
         toolButton[i]=new ImButton(g, 6, 50*i+Y, 48, 48);
       }
-      toolButton_chg =new Im2Button(loadImage("icon-07_1.png"), loadImage("icon-07.png"), 6, 50*(i-2)+Y, 48, 48);//画像変化のあるボタン
+      toolButton_chg =new Im2Button(loadImage(dataPath+"icon-07_1.png"), loadImage(dataPath+"icon-07.png"), 6, 50*(i-2)+Y, 48, 48);//画像変化のあるボタン
     }
     toolButton[0].setSelected(true);
     //Y+=50*toolButton.length+13;
@@ -92,7 +93,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 
     //回転用YZ軸ボタン
     for (int i=0; i<axisButton.length; i++) {
-      g=loadImage("icon-xyz"+(i+1)+".png");
+      g=loadImage(dataPath+"icon-xyz"+(i+1)+".png");
       axisButton[i]=new ImButton(g, 6+26*(i%2), 26*(i/2)+Y, 24, 24);
     }
     axisButton[0].setSelected(true);//初期状態で選択するボタン
@@ -100,24 +101,24 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
     Y+=26;
 
     for (int i=0; i<dataButton.length; i++) {
-      g=loadImage("icon-m"+i+".png");
+      g=loadImage(dataPath+"icon-m"+i+".png");
       dataButton[i]=new ImButton(g, 6+(getW()-18-6)*i, Y, 12, 24);
     }
     Y+=26*dataButton.length/2+13;
     for (int i=0; i<fileButton.length; i++) {
-      g=loadImage("icon-f"+i+".png");
+      g=loadImage(dataPath+"icon-f"+i+".png");
       fileButton[i]=new ImButton(g, 6+26*(i%2), 26*(i/2)+Y, 24, 24);
     }
     Y+=26*ceil(fileButton.length/2.)+13;
     Y+=26;
     //撮影切り替えボタン
-    chgButton=new Im2Button(loadImage("icon-cng1.png"), loadImage("icon-cng0.png"), 6, Y, 48, 24);
-    movButton=new Im2Button(loadImage("icon-cng1.png"), loadImage("icon-cng0.png"), 6, Y, 48, 24);
+    chgButton=new Im2Button(loadImage(dataPath+"icon-cng1.png"), loadImage(dataPath+"icon-cng0.png"), 6, Y, 48, 24);
+    movButton=new Im2Button(loadImage(dataPath+"icon-cng1.png"), loadImage(dataPath+"icon-cng0.png"), 6, Y, 48, 24);
     Y=Y+26+13;
-    resetMoveButton=new ImButton(loadImage("icon-resetmov.png"), 6, Y, 48, 24);
+    resetMoveButton=new ImButton(loadImage(dataPath+"icon-resetmov.png"), 6, Y, 48, 24);
 
     Y=Y+26+13;
-    animButton=new ImButton(loadImage("icon-anim.png"), 6, Y, 48, 24);
+    animButton=new ImButton(loadImage(dataPath+"icon-anim.png"), 6, Y, 48, 24);
 
     String t[]=loadStrings("system.ini");
     keyConfig=t[0].toCharArray();//キーコンフィグの読み込み
