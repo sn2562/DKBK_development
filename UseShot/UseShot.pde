@@ -1,8 +1,13 @@
 //processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
 
+//二画面用
 private PFrame data_frame;
 private SecondApplet second_app;
 
+boolean MainFrame = true;//二画面のうちどちらにいるか
+int SecondAppletW=200;
+int SecondAppletH=600;
+ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();//サムネイルボタン
 
 //更新のじどうか
 import SimpleOpenNI.*;
@@ -454,9 +459,19 @@ void mouseMoved() {//チェック
 	MainFrame=true;
 }
 
+//サムネイルの追加
+void addThumbnail(PImage g){
+	println("ボタンを追加");
+	PImage p;
+	try {
+		p = (PImage)g.clone();  // データの実体のコピー
+		p.resize(0,100);//画像のリサイズ
+		thumbnailButton.add(new ImButton(p, (SecondAppletW-p.width)/2, thumbnailButton.size()*100));
+	} catch (Exception e) {
+		// 例外処理
+	}
+}
 
-boolean MainFrame = true;//二画面のうちどちらにいるか
-ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();;//サムネイルボタン
 
 //データ画面
 class SecondApplet extends PApplet {
@@ -467,7 +482,7 @@ class SecondApplet extends PApplet {
 	float scrollY=0;//スクロール量
 
 	void setup() {
-		size( 200, 600 );
+		size( SecondAppletW, SecondAppletH );
 		p = new FileList(path);
 		println("p "+p.getFileList().length);
 		console(p.getFileList());
@@ -504,11 +519,13 @@ class SecondApplet extends PApplet {
 				//TODO : nullだった時(画像じゃない時)はその要素を配列から消しておきたい 
 			}
 			//画像付きボタンを作成する
-//			thumbnailButton = new ImButton[imgNum];
+			//			thumbnailButton = new ImButton[imgNum];
 
 			imgNum=0;
 			//画像だった時にサムネイルを作成する
 			PImage g;
+
+			//イカの部分を追加される度に実行する部分にすればいい...
 			for(int i = 0; i < fileArray.length; i++) {//二度目
 				if(match(fileArray[i], ".png") != null){
 					//画像付きボタンを作成する
@@ -532,6 +549,8 @@ class SecondApplet extends PApplet {
 			if (thumbnailButton.get(i).isMouseOver&& !pmousePressed&&mousePressed) {
 				thumbnailButton.get(i).setSelected(false);
 				println(i+" : 押されました");
+				//TODO : ツール番号を変更する
+				//tool.nowDataNumber
 			}
 		}
 	}
