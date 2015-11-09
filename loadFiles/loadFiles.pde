@@ -29,11 +29,8 @@ void draw(){
 	}
 	popMatrix();
 
-
 	update();
 	pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
-
-
 }
 
 void console(String[] fileArray){
