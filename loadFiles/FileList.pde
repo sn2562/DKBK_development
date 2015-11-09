@@ -6,8 +6,8 @@ import java.awt.Image;
 private String[] fileArray;
 
 public class FileList {
-	public FileList() {
-		String filePath = "/Users/kawasemi/Desktop/dsd";
+	public FileList(String filePath) {
+//		String filePath = "/Users/kawasemi/Desktop/dsd";
 		File directory1 = new File(filePath);
 		fileArray = directory1.list();
 		//		if (fileArray != null) {
