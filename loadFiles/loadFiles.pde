@@ -5,6 +5,8 @@ String path = "/Users/kawasemi/Desktop/dsd";//データが格納されている�
 int imgNum = 0;
 boolean pmousePressed=false;
 
+float scrollY=0;
+
 //画像をボタン化したい
 ImButton[] thumbnailButton;
 
@@ -15,12 +17,22 @@ void setup(){
 	console(p.getFileList());
 }
 void draw(){
+	//reset
+	background(150);
+
 	//各種ボタン描画
+	//ホイール位置に合わせて描画位置を移動
+	pushMatrix();
+	translate(0,scrollY);
 	for (int i=0; i<thumbnailButton.length; i++){
 		thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
 	}
-	update();	
+	popMatrix();
+
+
+	update();
 	pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
+
 
 }
 
@@ -34,8 +46,6 @@ void console(String[] fileArray){
 		}
 		//画像付きボタンを作成する
 		thumbnailButton = new ImButton[imgNum];
-
-
 
 		imgNum=0;
 		//画像だった時にサムネイルを作成する
@@ -57,10 +67,22 @@ void console(String[] fileArray){
 public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
 	//各種ボタンが押された時の処理
 	for (int i=0; i<thumbnailButton.length; i++) {
-		thumbnailButton[i].update(mouseX-getX(), mouseY-getY());
+		thumbnailButton[i].update(mouseX-getX(), mouseY-getY()-scrollY);
 		if (thumbnailButton[i].isPressed) {
 			thumbnailButton[i].setSelected(false);
 			println(i+" : 押されました");
 		}
+	}
+}
+
+//マウスホイールによって画面をスクロールする
+void mouseWheel(MouseEvent event) {
+	float e = event.getCount();
+	println(e);
+	scrollY=scrollY+e;
+	if(e>0){
+		//		scrollY=scrollY+e;
+	}else{
+		//		scrollY=scrollY-e;
 	}
 }
