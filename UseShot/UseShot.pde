@@ -463,7 +463,7 @@ void mouseMoved() {//チェック
 void addThumbnail(PImage g){
 	//TODO : closeの時は追加しない
 	if (thumbnailButton.size()==1&&tool.nowDataNumber==0){
-		
+
 	};
 	println("ボタンを追加");
 	PImage p;
