@@ -133,6 +133,12 @@ public class Obj {//左上を基準点としたオブジェクト
 	public void update(float x, float y) {//abstractなイメージ
 	}
 
+	public void resetButton(float x, float y){
+		this.x=x;
+		this.y=y;
+	}
+
+
 	public boolean pointOver(float x, float y) {//点がオブジェクト上にあるか
 		return abs(cx-x)<w/2&&abs(cy-y)<h/2;
 	}

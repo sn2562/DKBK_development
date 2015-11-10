@@ -267,8 +267,6 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 		for (int i=0; i<fileButton.length; i++) {
 			fileButton[i].update(mouseX-getX(), mouseY-getY());
 			if (fileButton[i].isPressed) {
-				println();
-				println("nowDataNumber "+nowDataNumber+" data.size "+data.size());
 				fileButton[i].setSelected(false);
 				switch(i) {
 					case 0://read
@@ -280,7 +278,9 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 								if (data.get(j).defaultData){
 									data.remove(j--);
 									thumbnailButton.remove(0);//デフォルトデータの削除
-									//TODO : 穴ぼこになった時にすでに追加されているボタンを消す
+									for(int k=0;k<thumbnailButton.size();k++){
+										thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
+									}
 								}
 							}
 						}
@@ -296,7 +296,9 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 					case 2://close
 					data.remove(nowDataNumber);
 					thumbnailButton.remove(nowDataNumber);
-					//TODO : 穴ぼこになった時にすでに追加されているボタンを消す
+					for(int k=0;k<thumbnailButton.size();k++){
+						thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
+					}
 
 					if (data.size()==0){
 						data.add(new Data(true));

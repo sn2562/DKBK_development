@@ -145,7 +145,8 @@ void draw() {
 
 	tool.draw();//ツールバーを描画
 
-	pmousePressed=mousePressed;
+	if(MainFrame)
+		pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
 }
 
 void mousePressed() {
@@ -509,7 +510,9 @@ class SecondApplet extends PApplet {
 		popMatrix();
 
 		update();
-		pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
+
+		if(!MainFrame)
+			pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
 
 
 	}
@@ -553,8 +556,9 @@ class SecondApplet extends PApplet {
 			if (thumbnailButton.get(i).isMouseOver&& !pmousePressed&&mousePressed) {
 				thumbnailButton.get(i).setSelected(false);
 				println(i+" : 押されました");
+
 				//TODO : ツール番号を変更する
-				//tool.nowDataNumber
+								tool.nowDataNumber=i;
 			}
 		}
 	}
