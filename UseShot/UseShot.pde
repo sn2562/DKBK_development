@@ -16,6 +16,9 @@ import SimpleOpenNI.*;
 String FilePath1;//始めにロードするデータとLキー押した時に読むデータのパスを入れ解くためのやつ(debug用)
 boolean debugMode=false;//デバックモードがtrue時は自動的に上記のファイルをロードする。
 
+String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版 保存場所およびロード場所
+
+
 final int K=2;//深度データ描写の細かさ
 final int LENGTH=1145;//デプスデータを格納している配列の大きさ
 final int data_width=640;//画像の解像度
