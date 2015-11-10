@@ -46,7 +46,6 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		draw_mode=0;
 		matrixReset();
 
-
 		//TODO : 自身をサムネイルボタンとして追加する
 		//thumbnailButton.append
 		addThumbnail(img);

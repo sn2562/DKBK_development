@@ -461,6 +461,10 @@ void mouseMoved() {//チェック
 
 //サムネイルの追加
 void addThumbnail(PImage g){
+	//TODO : closeの時は追加しない
+	if (thumbnailButton.size()==1&&tool.nowDataNumber==0){
+		
+	};
 	println("ボタンを追加");
 	PImage p;
 	try {
@@ -485,7 +489,7 @@ class SecondApplet extends PApplet {
 		size( SecondAppletW, SecondAppletH );
 		p = new FileList(path);
 		println("p "+p.getFileList().length);
-		console(p.getFileList());
+		//		console(p.getFileList());
 	}
 
 	void draw() {
