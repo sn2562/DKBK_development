@@ -48,6 +48,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 
 		//TODO : 自身をサムネイルボタンとして追加する
 		//thumbnailButton.append
+		println("サムネイルボタンを追加");
 		addThumbnail(img);
 
 
@@ -80,6 +81,10 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		loadAbled=true;
 
 		ready();
+	}
+
+	public PImage getImg(){
+		return img;
 	}
 
 	public Data() {//選択ダイアログを開いて読み込み

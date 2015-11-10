@@ -49,14 +49,11 @@ void setup() {
 	animFrame=frameset=0;
 	animation=false;
 
-	println("aaa");
-	println("ccc");
 
 	oldToolNumber=0;
 	context = new SimpleOpenNI(this);//カメラ更新用
 	context.setMirror(false);//鏡では表示しない
 
-	println("vvv");
 	frame.setTitle("DKBK");
 	size(int(640*screenZoom), int(480*screenZoom), P3D);
 
@@ -65,9 +62,7 @@ void setup() {
 
 	FilePath1=dataPath("")+"/todai_horiken7.dsd";
 
-	println("aaa");
 	tool=new Tool();//ツールバー
-	println("bbb");
 
 	take=new TakeShot(this);//テイクショット
 
@@ -485,7 +480,7 @@ class SecondApplet extends PApplet {
 	FileList p;//フォルダの中身一覧
 	int imgNum = 0;//画像数
 	float scrollY=0;//スクロール量
-	
+
 	//新しいデータを追加するボタン
 	private Button addData;
 
@@ -584,5 +579,18 @@ class SecondApplet extends PApplet {
 
 	boolean buttonMouseOver (){
 		return true;
+	}
+	public void keyPressed(java.awt.event.KeyEvent e) {
+		if (tool.getMode()) {
+			tool.shortCut(e.getKeyCode());
+			super.keyPressed(e);
+			switch(e.getKeyCode()) {//移動量を求める
+				case 'S'://データの描画モードを変更
+				data.get(tool.nowDataNumber).changeDrawMode();
+				println("描画を変更 "+data.get(tool.nowDataNumber).draw_mode);
+				break;
+			}
+		}
+
 	}
 }

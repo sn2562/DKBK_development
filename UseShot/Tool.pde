@@ -333,6 +333,8 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 			} else {
 				UseShot.oldToolNumber=nowToolNumber;
 			}
+			//サムネイルボタンを更新する
+			thumbnailButton.get(nowToolNumber).setImg(data.get(nowDataNumber).getImg());
 		}
 
 

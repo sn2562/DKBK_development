@@ -65,6 +65,15 @@ public class ImButton extends Button {//イメージ付きボタン
 	public PImage getImg(){
 		return img;
 	}
+	public void setImg(PImage i){
+		try {
+			img = (PImage)i.clone();
+			img.resize(0,100);//画像のリサイズ
+		} catch (Exception e) {
+			// 例外処理
+		}
+	}
+
 
 }
 
