@@ -1,0 +1,85 @@
+//processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/loadFiles --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/loadFiles --force
+
+FileList p;
+String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
+int imgNum = 0;
+boolean pmousePressed=false;
+
+float scrollY=0;
+
+//画像をボタン化したい
+ImButton[] thumbnailButton;
+
+void setup(){
+	size(500,500);
+	p = new FileList(path);
+	println("p "+p.getFileList().length);
+	console(p.getFileList());
+}
+void draw(){
+	//reset
+	background(150);
+
+	//各種ボタン描画
+	//ホイール位置に合わせて描画位置を移動
+	pushMatrix();
+	translate(0,scrollY);
+	for (int i=0; i<thumbnailButton.length; i++){
+		thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
+	}
+	popMatrix();
+
+	update();
+	pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
+}
+
+void console(String[] fileArray){
+	if (fileArray != null) {
+		//画像の枚数をカウントする
+		for(int i = 0; i < fileArray.length; i++) {
+			if(match(fileArray[i], ".png") != null)
+				imgNum++;
+			//TODO : nullだった時(画像じゃない時)はその要素を配列から消しておきたい 
+		}
+		//画像付きボタンを作成する
+		thumbnailButton = new ImButton[imgNum];
+
+		imgNum=0;
+		//画像だった時にサムネイルを作成する
+		PImage g;
+		for(int i = 0; i < fileArray.length; i++) {//二度目
+			if(match(fileArray[i], ".png") != null){
+				//画像付きボタンを作成する
+				g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
+				g.resize(0,100);//画像のリサイズ
+				thumbnailButton[imgNum]=new ImButton(g, (width-g.width)/2, imgNum*100);
+				imgNum++;
+			}
+		}
+	} else{
+		println("この階層には何もありません");
+	}
+}
+
+public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
+	//各種ボタンが押された時の処理
+	for (int i=0; i<thumbnailButton.length; i++) {
+		thumbnailButton[i].update(mouseX-getX(), mouseY-getY()-scrollY);
+		if (thumbnailButton[i].isPressed) {
+			thumbnailButton[i].setSelected(false);
+			println(i+" : 押されました");
+		}
+	}
+}
+
+//マウスホイールによって画面をスクロールする
+void mouseWheel(MouseEvent event) {
+	float e = event.getCount();
+	println(e);
+	scrollY=scrollY+e;
+	if(e>0){
+		//		scrollY=scrollY+e;
+	}else{
+		//		scrollY=scrollY-e;
+	}
+}

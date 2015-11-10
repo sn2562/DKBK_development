@@ -41,6 +41,10 @@ public class ImButton extends Button {//イメージ付きボタン
 		hideButtonLine=false;
 	}
 
+	public PImage getImg(){
+		return img;
+	}
+
 	//====================//
 
 	public void draw(float x, float y) {
@@ -57,24 +61,11 @@ public class ImButton extends Button {//イメージ付きボタン
 			else if (isMouseOver)
 				stroke(#9999AA);
 				if (!hideButtonLine||(selected||isMouseOver))
-				rect(getX(), getY(), getW(), getH());
-				image(img, getX(), getY(), getW(), getH());
+				rect(getX(), getY(), getW(), getH());//ここの描画先を変更したい
+				image(img, getX(), getY(), getW(), getH());//ここの描画先を変更したい
 			strokeWeight(1);
 		}
 	}
-	public PImage getImg(){
-		return img;
-	}
-	public void setImg(PImage i){
-		try {
-			img = (PImage)i.clone();
-			img.resize(0,100);//画像のリサイズ
-		} catch (Exception e) {
-			// 例外処理
-		}
-	}
-
-
 }
 
 public class Button extends Obj {//ボタン
@@ -117,7 +108,10 @@ public class Button extends Obj {//ボタン
 		return selected;
 	}
 
-	private boolean pressed() {//押された瞬間であるかどうか
+	private boolean pressed() {//押された瞬間であるかどうか ここ！
+		//		println("isMouseOver "+isMouseOver);
+		//		println("!pmousePressed "+!pmousePressed);
+		//		println("mousePressed "+mousePressed);
 		return isMouseOver&&!pmousePressed&&mousePressed;
 	}
 	private boolean released() {//離された瞬間であるかどうか
