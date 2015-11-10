@@ -485,6 +485,9 @@ class SecondApplet extends PApplet {
 	FileList p;//フォルダの中身一覧
 	int imgNum = 0;//画像数
 	float scrollY=0;//スクロール量
+	
+	//新しいデータを追加するボタン
+	private Button addData;
 
 	void setup() {
 		size( SecondAppletW, SecondAppletH );
@@ -496,12 +499,18 @@ class SecondApplet extends PApplet {
 	void draw() {
 		background(255);
 		fill(255, 0, 0);
-		ellipse( mouseX, mouseY, 50, 50 );
+		ellipse( mouseX, mouseY, 10, 10 );
 
 		//各種ボタン描画
 		//ホイール位置に合わせて描画位置を移動
 		pushMatrix();
 		translate(0,scrollY);
+
+		//選択中のデータの横に色を付けておく
+		fill(#40a5ac);
+		noStroke();
+		rect(20,100*tool.nowDataNumber,50,100);
+
 		for (int i=0; i<thumbnailButton.size(); i++){
 			//			thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
 			rect(thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());//ここの描画先を変更したい
@@ -558,7 +567,7 @@ class SecondApplet extends PApplet {
 				println(i+" : 押されました");
 
 				//TODO : ツール番号を変更する
-								tool.nowDataNumber=i;
+				tool.nowDataNumber=i;
 			}
 		}
 	}
