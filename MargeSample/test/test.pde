@@ -1,3 +1,6 @@
+//processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/MargeSample/test --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/MargeSample/test/output --force
+
+
 boolean debugMode=false;//デバックモードがtrue時は自動的に上記のファイルをロードする。
 
 
@@ -18,13 +21,12 @@ final int data_height=480;//画像の解像度
 
 static ArrayList<Data> data;//扱っているデータを格納しておく場所
 
-
-
 int nowDataNumber;
 PVector OAm, OBm, OCm;
 boolean showTestMerge=false;
 
 void setup() {
+	println("てすとだよ");
   frame.setTitle("DKBK");
   size(int(640*screenZoom), int(480*screenZoom), P3D);
 
