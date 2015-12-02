@@ -36,9 +36,14 @@ static boolean animation;//アニメーションしてもいいかどうか
 static int framecount=5;//設定するフレームカウント
 
 boolean mergeMode = false;
+boolean showTestMerge=false;
+
+private int margesketch1 = 0;
+private int margesketch2 = 0;
 
 SimpleOpenNI context;//カメラ更新用
 static int oldToolNumber;
+PVector OAm, OBm, OCm;,,,
 
 String getParentFilePath(String path, int n) {//n階層上のファイルパスを取得
 	File f=new File(path);
@@ -128,9 +133,12 @@ void draw() {
 		//todo
 		//useshot系データの描画
 		for (int i=0; i<data.size (); i++) {//各種データの操作と描画
-			data.get(i).update();
-
-			if (tool.getMovMode()) {//trueで静止画モード,falseで動画モード
+			if(!mergeMode){//マージオフ
+				data.get(i).update();			
+			}else{//マージオン
+				data.get(margesketch1).update();
+				data.get(margesketch2).update();
+			}			if (tool.getMovMode()) {//trueで静止画モード,falseで動画モード
 			} else {
 				take.draw();
 				take.save();//更新する
@@ -147,9 +155,6 @@ void draw() {
 }
 
 void mousePressed() {
-	//検証用
-	//  println(tool.nowToolNumber);
-
 	//切り替え
 
 	//線の太さをペンのボタンで変更する
@@ -157,20 +162,31 @@ void mousePressed() {
 
 	if (tool.getMode()) {
 		if (!tool.pointOver(mouseX, mouseY)) {//ツールバーに重なってないのなら
-			data.get(tool.nowDataNumber).addLine();//線を追加
+			if(!mergeMode)
+				data.get(tool.nowDataNumber).addLine();//線を追加
+			else{//マージモードなら
+				int num = data.get(tool.nowDataNumber).pointNum;
+				println("PCanvas "+num+" "+data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY));
+				if (num<3) {
+					data.get(tool.nowDataNumber).points[data.get(tool.nowDataNumber).pointNum]=data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY);
+					data.get(tool.nowDataNumber).pointNum++;
+					//data.get(nowDataNumber).addPoint(mouseX, mouseY);
+				} else if (num==3) {
+					//三点のリセット
+					for (int i=0; i<3; i++) {
+						data.get(tool.nowDataNumber).points[i]=new PVector(0, 0, 0);
+					}
+					data.get(tool.nowDataNumber).pointNum=0;
+				}
+				println("mousePressed end");
+			}
+
 		}
 	} else {//ツールバーに重なっていたら
 		take.mousePressed();
 	}
 
 	if (tool.pointOver(mouseX, mouseY)) {//ツールバーに重なっている時
-		//println("重なってる");
-		/*
-    if (oldToolNumber==tool.nowToolNumber) {//もし複数回クリックならば
-     println("複数回クリック:number"+oldToolNumber);
-     //data.get(tool.nowDataNumber).changeDrawMode();
-     }
-     */
 	}
 }
 
@@ -405,6 +421,10 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			mergeMode=!mergeMode;
 			break;
 
+			case ',':
+			showMergeView();
+			break;
+
 
 			default:
 			break;
@@ -603,5 +623,47 @@ class SecondApplet extends PApplet {
 			}
 		}
 
+	}
+}
+
+void showMergeView(){
+	int sketch1=margesketch1;//マージ元スケッチの番号
+	int sketch2=margesketch2;//変換されるスケッチの番号
+	if (showTestMerge) {//表示設定担っている時はとりあえず非表示に設定する
+		println("非表示");
+		showTestMerge=false;
+		data.get(sketch2).changeSketchView =false;
+		data.get(sketch1).draw_mode=0;
+		data.get(sketch2).draw_mode=0;
+		showTestMerge=false;
+	}
+
+	if (data.get(1).pointNum!=3 || data.get(2).pointNum!=3) {//マージ用のポイントが揃っていなかったら中止
+		println("点の数が足りません");
+		return;
+	}
+	//両方表示する
+	showTestMerge=!showTestMerge;//両方表示する
+
+	if (showTestMerge) {//trueならば計算しなおして表示する
+		println("計算を開始します");
+
+
+		//軸にsketch1の軸を指定する
+		//calcChangePosition();
+		OAm=data.get(sketch1).calcChangeAxis()[0];
+		OBm=data.get(sketch1).calcChangeAxis()[1];
+		OCm=data.get(sketch1).calcChangeAxis()[2];
+		PVector []ttt = data.get(sketch2).calcChangeAxis();
+
+		println("OA "+OAm);
+		println("OB "+OBm);
+		println("OC "+OCm);
+
+		//マージするsketch2の表示方法を変更する
+		data.get(sketch2).changeSketchView = !data.get(sketch2).changeSketchView;
+		//表示方法をかえる
+		data.get(sketch1).draw_mode=2;
+		data.get(sketch2).draw_mode=2;
 	}
 }

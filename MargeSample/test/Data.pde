@@ -13,7 +13,6 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
   //計算用
   PVector OA, OB, OC;
 
-
   private PVector pos;
   private float rotX, rotY, rotZ;//回転量
   private int draw_mode;//写真と線を表示(0) 線だけ表示(1) 深度と線を表示(2) 表示なし(3) 
