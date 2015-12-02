@@ -472,7 +472,6 @@ void addThumbnail(PImage g){
 	}
 }
 
-
 //データ画面
 class SecondApplet extends PApplet {
 	//サムネイル表示用
