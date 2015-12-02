@@ -21,7 +21,7 @@ final int LENGTH=1145;//デプスデータを格納している配列の大き�
 final int data_width=640;//画像の解像度
 final int data_height=480;//画像の解像度
 
-final float screenZoom=1.2;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
+final float screenZoom=1.6;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
 
 private TakeShot take;//データの保存に利用
 private Tool tool;//ツールバー
@@ -34,6 +34,8 @@ static int animFrame;//フレームレートに沿ったフレーム数
 static int frameset;//
 static boolean animation;//アニメーションしてもいいかどうか
 static int framecount=5;//設定するフレームカウント
+
+boolean mergeMode = false;
 
 SimpleOpenNI context;//カメラ更新用
 static int oldToolNumber;
@@ -399,6 +401,10 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			data.get(tool.nowDataNumber).redo();
 			break;
 
+			case 'M'://merge mode
+			mergeMode=!mergeMode;
+			break;
+
 
 			default:
 			break;
@@ -479,19 +485,25 @@ class SecondApplet extends PApplet {
 	FileList p;//フォルダの中身一覧
 	int imgNum = 0;//画像数
 	float scrollY=0;//スクロール量
+	//	int(480*screenZoom)
 
 	//新しいデータを追加するボタン
 	private Button addData;
 
 	void setup() {
-		size( SecondAppletW, SecondAppletH );
+		//		size( SecondAppletW, SecondAppletH );
+		size( SecondAppletW, int(480*screenZoom) );
 		p = new FileList(path);
 		println("p "+p.getFileList().length);
 		//		console(p.getFileList());
 	}
 
 	void draw() {
-		background(255);
+		if(mergeMode)
+			background(255,200,200);
+		else
+			background(255);
+
 		fill(255, 0, 0);
 		ellipse( mouseX, mouseY, 10, 10 );
 
