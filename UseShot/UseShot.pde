@@ -242,6 +242,7 @@ void mouseDragged() {
 			}
 		}
 	} else {//それ以外
+		if(mergeMode) return;
 		//ツールごとの設定
 		if (tool.getMode()) {
 			if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
@@ -330,6 +331,9 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 				data.get(tool.nowDataNumber).matrixReset();
 			else
 				tool.matrixReset();
+
+			if(showTestMerge)
+				showTestMerge=!showTestMerge;
 			break;
 			case LEFT:
 			case RIGHT:
@@ -592,9 +596,21 @@ class SecondApplet extends PApplet {
 				thumbnailButton.get(i).setSelected(false);
 				println(i+" : 押されました");
 
-				//TODO : ツール番号を変更する
+				//ツール番号を変更する
+				//				int preNumber = tool.nowDataNumber;
+				int preDrawMode = data.get(tool.nowDataNumber).draw_mode;
 				tool.nowDataNumber=i;
 				margesketch2 = i;
+				//表示を新しい一枚に変更する draw_modeは0~3
+				for (int j=0; j<data.size (); j++) {
+					if (j==tool.nowDataNumber)//選択中のデータならば
+						data.get(j).draw_mode=preDrawMode;//表示
+					else//それ以外
+						data.get(j).draw_mode=3;//非表示
+				}
+
+
+
 				println("マージ元:0,マージ対象:"+i);
 			}
 		}
@@ -646,7 +662,7 @@ void showMergeView(){
 		showTestMerge=false;
 	}
 
-	if (data.get(1).pointNum!=3 || data.get(2).pointNum!=3) {//マージ用のポイントが揃っていなかったら中止
+	if (data.get(sketch1).pointNum!=3 || data.get(sketch2).pointNum!=3) {//マージ用のポイントが揃っていなかったら中止
 		println("点の数が足りません");
 		return;
 	}
@@ -655,7 +671,6 @@ void showMergeView(){
 
 	if (showTestMerge) {//trueならば計算しなおして表示する
 		println("計算を開始します");
-
 
 		//軸にsketch1の軸を指定する
 		//calcChangePosition();
