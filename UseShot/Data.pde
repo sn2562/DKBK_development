@@ -438,13 +438,13 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		}
 
 
-
-		popMatrix();
-
 		if(mergeMode){//マージがonになっているなら
 			drawCube();
 			//				drawMergeLine();
 		}
+
+		popMatrix();
+
 	}
 
 
