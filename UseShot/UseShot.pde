@@ -43,7 +43,7 @@ private int margesketch2 = 0;
 
 SimpleOpenNI context;//カメラ更新用
 static int oldToolNumber;
-PVector OAm, OBm, OCm;,,,
+PVector OAm, OBm, OCm;
 
 String getParentFilePath(String path, int n) {//n階層上のファイルパスを取得
 	File f=new File(path);

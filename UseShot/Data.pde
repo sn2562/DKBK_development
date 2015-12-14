@@ -183,9 +183,9 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 				for (int iy=-10; iy<=10; iy++)//iy<10まで(まわりの値もとるため)
 					for (int ix=-10; ix<=10; ix++) {//ix<10まで(まわりの値もとるため)
 					if (0<=x+ix&&x+ix<img.width&&0<=y+iy&&iy+y<img.height) {//画像範囲内のときだけ処理を実行
-						//              if (depthMap[(y+iy)*img.width+(x+ix)]!=0) {
+						//if (depthMap[(y+iy)*img.width+(x+ix)]!=0) {
 						if (realWorldMap[(y+iy)*img.width+(x+ix)].z!=0) {//データがあれば
-							//                sum+=depthMap[(y+iy)*img.width+(x+ix)];
+							//sum+=depthMap[(y+iy)*img.width+(x+ix)];
 							if (mouseButton==LEFT)
 								sum+=realWorldMap[(y+iy)*img.width+(x+ix)].z;//もしクリックしたらsum値を変更
 							else
