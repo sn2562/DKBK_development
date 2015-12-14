@@ -421,7 +421,7 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			mergeMode=!mergeMode;
 			break;
 
-			case ',':
+			case 'B':
 			showMergeView();
 			break;
 
@@ -635,6 +635,7 @@ class SecondApplet extends PApplet {
 void showMergeView(){
 	int sketch1=margesketch1;//マージ元スケッチの番号
 	int sketch2=margesketch2;//変換されるスケッチの番号
+	println("マージ　："+sketch1+" + "+sketch2);
 
 	if (showTestMerge) {//表示設定担っている時はとりあえず非表示に設定する
 		println("非表示");
