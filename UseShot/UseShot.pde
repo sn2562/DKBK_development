@@ -335,8 +335,10 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			else
 				tool.matrixReset();
 
-			if(showTestMerge)
+			if(showTestMerge){
 				showTestMerge=!showTestMerge;
+				mergeMode = !mergeMode;
+			}
 			break;
 			case LEFT:
 			case RIGHT:

@@ -32,7 +32,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 	private PVector[] projectionMap;//projectionMapは回転後を見るために使う
 	public String dataname="";
 
-//	private String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版/選択したファイル
+	//	private String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版/選択したファイル
 	//private String Savepath="C:\\Users\\imlab\\Desktop\\dsdData\\kikuchi"+year()+month()+day()+hour()+"_"+minute()+"_"+second()+".dsd";//windows版
 	//private String Savepath="C:\\Users\\sumi_000\\Desktop\\dsdData\\oikawa"+year()+month()+day()+hour()+"_"+minute()+"_"+second()+".dsd";//windows版
 
@@ -418,7 +418,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		}
 		if (draw_mode!=3){
 			if(showTestMerge){//マージが完了していたら
-				//				drawMergeLine();
+				drawMergeLine();
 			}else{
 				drawLine();
 			}
@@ -431,9 +431,10 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 
 
 		if (draw_mode==2) {
-			if(showTestMerge)//マージが完了していたら
+			if(showTestMerge){//マージが完了していたら
 				drawMergeDepthData();
-			else//マージがonになっていないならやらない
+				drawMergeLine();
+			}else//マージがonになっていないならやらない
 				drawDepthData();
 		}
 
