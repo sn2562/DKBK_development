@@ -384,30 +384,30 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			println("animationの切り替え animation:"+animation);
 			//println("");
 			break;
-			case '1'://線の太さを変える
-			setLineW=3;
-			println("Line : 1");
-			break;
-			case '2':
-			setLineW=5;
-			println("Line : 2");
-			break;
-			case '3':
-			setLineW=7;
-			println("Line : 3");
-			break;
-			case '4':
-			setLineW=9;
-			println("Line : 4");
-			break;
-			case '5':
-			setLineW=11;
-			println("Line : 5");
-			break;
-			case '6':
-			setLineW=13;
-			println("Line : 6");
-			break;
+//			case '1'://線の太さを変える
+//			setLineW=3;
+//			println("Line : 1");
+//			break;
+//			case '2':
+//			setLineW=5;
+//			println("Line : 2");
+//			break;
+//			case '3':
+//			setLineW=7;
+//			println("Line : 3");
+//			break;
+//			case '4':
+//			setLineW=9;
+//			println("Line : 4");
+//			break;
+//			case '5':
+//			setLineW=11;
+//			println("Line : 5");
+//			break;
+//			case '6':
+//			setLineW=13;
+//			println("Line : 6");
+//			break;
 
 			case '8':
 			data.get(tool.nowDataNumber).undo();
@@ -629,12 +629,13 @@ class SecondApplet extends PApplet {
 void showMergeView(){
 	int sketch1=margesketch1;//マージ元スケッチの番号
 	int sketch2=margesketch2;//変換されるスケッチの番号
+	
 	if (showTestMerge) {//表示設定担っている時はとりあえず非表示に設定する
 		println("非表示");
 		showTestMerge=false;
 		data.get(sketch2).changeSketchView =false;
-		data.get(sketch1).draw_mode=0;
-		data.get(sketch2).draw_mode=0;
+		data.get(sketch1).draw_mode=1;
+		data.get(sketch2).draw_mode=1;
 		showTestMerge=false;
 	}
 

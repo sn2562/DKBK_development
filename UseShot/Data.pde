@@ -417,9 +417,8 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
        */
 		}
 		if (draw_mode!=3){
-			if(mergeMode){//マージがonになっているなら
-				drawCube();
-				drawMergeLine();
+			if(showTestMerge){//マージが完了していたら
+				//				drawMergeLine();
 			}else{
 				drawLine();
 			}
@@ -432,13 +431,22 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 
 
 		if (draw_mode==2) {
-			if(mergeMode)//マージがonになっているなら
+			if(showTestMerge)//マージが完了していたら
 				drawMergeDepthData();
 			else//マージがonになっていないならやらない
 				drawDepthData();
 		}
+
+
+
 		popMatrix();
+
+		if(mergeMode){//マージがonになっているなら
+			drawCube();
+			//				drawMergeLine();
+		}
 	}
+
 
 	public void addLine() {//mousePressed時に呼ぶ
 		switch(tool.nowToolNumber) {
