@@ -8,21 +8,15 @@ boolean MainFrame = true;//二画面のうちどちらにいるか
 int SecondAppletW=200;
 int SecondAppletH=600;
 ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();//サムネイルボタン
-ImButton[] unLoadedThumbnailButton;//サムネイルボタン
 
 //更新のじどうか
 import SimpleOpenNI.*;
 //changed 20150906z
 
 String FilePath1;//始めにロードするデータとLキー押した時に読むデータのパスを入れ解くためのやつ(debug用)
-boolean debugMode=true;//デバックモードがtrue時は自動的に上記のファイルをロードする。
+boolean debugMode=false;//デバックモードがtrue時は自動的に上記のファイルをロードする。
 
-//auto load
-FileList p;
 String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版 保存場所およびロード場所
-//String Savepath="/Users/kawasemi/Desktop/test/";//mac版 保存場所およびロード場所
-int imgNum = 0;
-
 
 
 final int K=2;//深度データ描写の細かさ
@@ -30,7 +24,7 @@ final int LENGTH=1145;//デプスデータを格納している配列の大き�
 final int data_width=640;//画像の解像度
 final int data_height=480;//画像の解像度
 
-final float screenZoom=1.0;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
+final float screenZoom=1.6;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
 
 private TakeShot take;//データの保存に利用
 private Tool tool;//ツールバー
@@ -516,8 +510,7 @@ void addThumbnail(PImage g){
 //データ画面
 class SecondApplet extends PApplet {
 	//サムネイル表示用
-	//	String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパスはSavepathで代用
-	String path = Savepath;
+	String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
 	FileList p;//フォルダの中身一覧
 	int imgNum = 0;//画像数
 	float scrollY=0;//スクロール量
@@ -531,13 +524,10 @@ class SecondApplet extends PApplet {
 		size( SecondAppletW, int(480*screenZoom) );
 		p = new FileList(path);
 		println("p "+p.getFileList().length);
-		console(p.getFileList());
-		println("setup end");
+		//		console(p.getFileList());
 	}
 
 	void draw() {
-		println("draw");
-		println("ここかな 4");
 		if(mergeMode)
 			background(255,200,200);
 		else
@@ -545,7 +535,7 @@ class SecondApplet extends PApplet {
 
 		fill(255, 0, 0);
 		ellipse( mouseX, mouseY, 10, 10 );
-		println("ここかな 5");
+
 		//各種ボタン描画
 		//ホイール位置に合わせて描画位置を移動
 		pushMatrix();
@@ -555,29 +545,12 @@ class SecondApplet extends PApplet {
 		fill(#40a5ac);
 		noStroke();
 		rect(20,100*tool.nowDataNumber,50,100);
-		println("ここかな 1");
+
 		for (int i=0; i<thumbnailButton.size(); i++){
 			//			thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
 			rect(thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());//ここの描画先を変更したい
 			image(thumbnailButton.get(i).getImg(), thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());
 		}
-
-		println("ここかな 2");
-
-		if(thumbnailButton.size()>0)
-			translate(0,100+thumbnailButton.get(thumbnailButton.size()-1).getY());
-
-		//check
-		println("ここかな 3");
-		println("unLoadedThumbnailButton "+unLoadedThumbnailButton.length);
-		for (int i=0; i<imgNum; i++){
-			println("check i "+i);
-			//			unLoadedThumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
-			image(unLoadedThumbnailButton[i].getImg(), unLoadedThumbnailButton[i].getX(), unLoadedThumbnailButton[i].getY(), unLoadedThumbnailButton[i].getW(), unLoadedThumbnailButton[i].getH());
-
-		}
-
-
 		popMatrix();
 
 		update();
@@ -589,61 +562,33 @@ class SecondApplet extends PApplet {
 	}
 
 	void console(String[] fileArray){
-		println("run console");
 		if (fileArray != null) {
 			//画像の枚数をカウントする
-			int end =fileArray.length; 
-			for(int i = 0; i < end; i++) {
-				if(match(fileArray[i], ".png") != null){
+			for(int i = 0; i < fileArray.length; i++) {
+				if(match(fileArray[i], ".png") != null)
 					imgNum++;
-				}else{
-					for(int j=i;j< end-1; j++) {//.pngじゃないなら詰める
-						fileArray[j] = fileArray[j+1];
-					}
-					fileArray[end-1]="";
-					end--;
-					i--;
-				}
+				//TODO : nullだった時(画像じゃない時)はその要素を配列から消しておきたい 
 			}
+			//画像付きボタンを作成する
+			//			thumbnailButton = new ImButton[imgNum];
 
-
-			for(int i = 0; i < fileArray.length; i++) 
-				println("check i "+i+" : "+fileArray[i]);//check
-
-
-			//画像付きサムネイルボタンを作成する
-			unLoadedThumbnailButton = new ImButton[imgNum];
-
+			imgNum=0;
 			//画像だった時にサムネイルを作成する
 			PImage g;
 
-			//			for(int i = 0; i < end-1; i++) {//二度目
-			for(int i = 0; i < imgNum; i++) {//二度目
-				print("作成 "+i+" "+fileArray[i]);
+			//イカの部分を追加される度に実行する部分にすればいい...
+			for(int i = 0; i < fileArray.length; i++) {//二度目
 				if(match(fileArray[i], ".png") != null){
-
 					//画像付きボタンを作成する
-					println();
-					//					println("2");
-
-					//					g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
-					println(i+" "+path+fileArray[i]);
-					g=loadImage(path+fileArray[i]);//画像の読み込み?
-					//					g=loadImage("/Users/kawasemi/Desktop/mail.png");
+					g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
 					g.resize(0,100);//画像のリサイズ
-					//					println("3");
-
-					unLoadedThumbnailButton[i]=new ImButton(g, 100, i*100);
-					//					unLoadedThumbnailButton[i]=new ImButton(g, (width-g.width)/2, i*100);
-					//					println("4");
-					//				imgNum++;
+					thumbnailButton.add(new ImButton(g, (width-g.width)/2, imgNum*100));
+					imgNum++;
 				}
 			}
-			//			imgNum = end;
 		} else{
 			println("この階層には何もありません");
 		}
-		println("end");
 	}
 
 	public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
@@ -651,7 +596,7 @@ class SecondApplet extends PApplet {
 		for (int i=0; i<thumbnailButton.size(); i++) {
 			if(MainFrame)//この画面じゃないならやらない
 				break;
-			//.get(i).update(mouseX-getX(), mouseY-getY()-scrollY);
+			thumbnailButton.get(i).update(mouseX-getX(), mouseY-getY()-scrollY);
 			if (thumbnailButton.get(i).isMouseOver&& !pmousePressed&&mousePressed) {
 				thumbnailButton.get(i).setSelected(false);
 				println(i+" : 押されました");
@@ -669,21 +614,9 @@ class SecondApplet extends PApplet {
 						data.get(j).draw_mode=3;//非表示
 				}
 
+
+
 				println("マージ元:0,マージ対象:"+i);
-			}
-		}
-
-		for (int i=0; i<unLoadedThumbnailButton.length; i++) {
-
-			if(thumbnailButton.size()!=0)
-				unLoadedThumbnailButton[i].update(mouseX-getX(), mouseY-getY()-scrollY-100-thumbnailButton.get(thumbnailButton.size()-1).getY());
-			else
-				unLoadedThumbnailButton[i].update(mouseX-getX(), mouseY-getY()-scrollY-100);
-
-
-			if (unLoadedThumbnailButton[i].isMouseOver&& !pmousePressed&&mousePressed) {
-				unLoadedThumbnailButton[i].setSelected(false);
-				println(i+" : 押されました");
 			}
 		}
 	}
