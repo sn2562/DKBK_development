@@ -6,6 +6,13 @@ import java.awt.FileDialog;
 import java.io.*;
 
 public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
+	//三点
+	public PVector[] points = new PVector[3];//マウスでクリックした三点
+	private int pointNum = 0;
+	public boolean changeSketchView = false;
+	//計算用
+	PVector OA, OB, OC;
+
 	private PVector pos;
 	private float rotX, rotY, rotZ;//回転量
 	private int draw_mode;//写真と線を表示(0) 線だけ表示(1) 深度と線を表示(2) 表示なし(3) 
@@ -25,7 +32,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 	private PVector[] projectionMap;//projectionMapは回転後を見るために使う
 	public String dataname="";
 
-//	private String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版/選択したファイル
+	//	private String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版/選択したファイル
 	//private String Savepath="C:\\Users\\imlab\\Desktop\\dsdData\\kikuchi"+year()+month()+day()+hour()+"_"+minute()+"_"+second()+".dsd";//windows版
 	//private String Savepath="C:\\Users\\sumi_000\\Desktop\\dsdData\\oikawa"+year()+month()+day()+hour()+"_"+minute()+"_"+second()+".dsd";//windows版
 
@@ -51,7 +58,10 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		println("サムネイルボタンを追加");
 		addThumbnail(img);
 
-
+		//マージ用三点のリセット
+		for (int i=0; i<3; i++) {
+			points[i]=new PVector(0, 0, 0);
+		}  
 	}
 
 	public Data(boolean t) {//空のデータを入れるためのコンストラクタ
@@ -173,9 +183,9 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 				for (int iy=-10; iy<=10; iy++)//iy<10まで(まわりの値もとるため)
 					for (int ix=-10; ix<=10; ix++) {//ix<10まで(まわりの値もとるため)
 					if (0<=x+ix&&x+ix<img.width&&0<=y+iy&&iy+y<img.height) {//画像範囲内のときだけ処理を実行
-						//              if (depthMap[(y+iy)*img.width+(x+ix)]!=0) {
+						//if (depthMap[(y+iy)*img.width+(x+ix)]!=0) {
 						if (realWorldMap[(y+iy)*img.width+(x+ix)].z!=0) {//データがあれば
-							//                sum+=depthMap[(y+iy)*img.width+(x+ix)];
+							//sum+=depthMap[(y+iy)*img.width+(x+ix)];
 							if (mouseButton==LEFT)
 								sum+=realWorldMap[(y+iy)*img.width+(x+ix)].z;//もしクリックしたらsum値を変更
 							else
@@ -406,8 +416,13 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 
        */
 		}
-		if (draw_mode!=3)
-			drawLine();
+		if (draw_mode!=3){
+			if(showTestMerge){//マージが完了していたら
+				drawMergeLine();
+			}else{
+				drawLine();
+			}
+		}
 		popMatrix();
 
 		//todo
@@ -416,10 +431,23 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 
 
 		if (draw_mode==2) {
-			drawDepthData();
+			if(showTestMerge){//マージが完了していたら
+				drawMergeDepthData();
+				drawMergeLine();
+			}else//マージがonになっていないならやらない
+				drawDepthData();
 		}
+
+
+		if(mergeMode){//マージがonになっているなら
+			drawCube();
+			//				drawMergeLine();
+		}
+
 		popMatrix();
+
 	}
+
 
 	public void addLine() {//mousePressed時に呼ぶ
 		switch(tool.nowToolNumber) {
@@ -476,6 +504,25 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 			}
 			endShape();
 			//drawArea();
+			strokeWeight(1);
+		}
+	}
+
+	private void drawMergeLine() {
+		noFill();
+		for (DT line : lines) {
+			stroke(line.c);
+			strokeWeight(line.w);
+			if (line.beginShape()==-1)
+				beginShape();
+			else
+				beginShape(line.beginShape());
+			for (PVector p : line) {
+				p = calcChangePosition(p);
+				vertex(p.x, p.y, p.z);
+				vertex(p.x, p.y, p.z);//vertex一回だとなぜか線をsize()==2の時なぜか線を書いてくれない
+			}
+			endShape();
 			strokeWeight(1);
 		}
 	}
@@ -553,6 +600,28 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 				if (p.z > 0) { 
 					stroke(img.pixels[index]);
 
+					point(p.x, p.y, p.z);  // make realworld z negative, in the 3d drawing coordsystem +z points in the direction of the eye
+				}
+			}
+		}
+		strokeWeight(1);
+	}
+	private void drawMergeDepthData() {//マージ用の深度データを描画する
+
+		if (tool.nowToolNumber==4) {
+			noFill();
+			stroke(255);
+			box(100, 500, 100);
+		}
+		int K=4;
+		strokeWeight(K);
+		for (int y=0; y < img.height; y+=K) {
+			for (int x=0; x < img.width; x+=K) {
+				int index = x + y * img.width;
+				PVector p=realWorldMap_back[index];
+				if (p.z > 0) { 
+					stroke(img.pixels[index]);
+					p = calcChangePosition(p);
 					point(p.x, p.y, p.z);  // make realworld z negative, in the 3d drawing coordsystem +z points in the direction of the eye
 				}
 			}
@@ -1112,6 +1181,136 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 	public void printTR() {
 		print("pos :"+pos);
 		println(" rot"+rotX+" "+rotY+" "+rotZ);
+	}
+
+
+	//マージプログラム用
+	private PVector calcNVector(PVector[] p) {//3点からなる面の法線ベクトルを返す
+		//if (p.length!=3)return new PVector(0, 0, 0);
+
+		PVector AB = PVector.sub(p[1], p[0]);
+		PVector AC = PVector.sub(p[2], p[0]);
+		PVector n= AB.cross(AC);//法線ベクトル
+		n.normalize();//法線ベクトルの正規化
+		//  n.mult(1000);//法線ベクトルのスカラー倍
+
+		return n;
+	}
+
+
+
+	public PVector[] calcChangeAxis() {
+		//三点から三軸を計算して格納する
+		//基準の3軸
+		OA = PVector.sub(points[1], points[0]);
+		OA.normalize();
+
+		OB = PVector.sub(points[2], points[0]);
+
+		OC = calcNVector(points);//法線ベクトルを計算する
+		OC.normalize();
+
+		//OBは垂直になるように再計算する
+		OB = OA.cross(OC);//法線ベクトル
+		OB.normalize();
+		PVector[] ans = {
+			OA, OB, OC
+		};
+
+		return ans;
+	}
+	public PVector calcChangePosition(PVector x) {//任意の点xを受け取ったら位置変換後の場所を返す
+		//println("calcChangePositionを実行 ベクトルx="+x);
+		//計算用
+		float[][] value = new float[3][4];//計算前の係数
+		float calcAns[] = new float[3];//計算結果 αβγ
+
+		//計算用の係数をセットする
+		value[0][0]=x.x;
+		value[0][1]=OA.x;
+		value[0][2]=OB.x;
+		value[0][3]=OC.x;
+
+		value[1][0]=x.y;
+		value[1][1]=OA.y;
+		value[1][2]=OB.y;
+		value[1][3]=OC.y;
+
+		value[2][0]=x.z;
+		value[2][1]=OA.z;
+		value[2][2]=OB.z;
+		value[2][3]=OC.z;
+
+		//GaussJordan法で連立方程式を解く
+		int michisu=3;//未知数の数
+
+		for (int m=0; m<michisu; m++) {
+			int chu = m;//注目式の番号
+			if (value[chu][chu+1]==0) {
+				break;//0除算を避ける
+			}
+
+			//注目式の未知数の係数を1にする
+			float div = value[chu][chu+1];//値が途中で変わってしまうのでとっておく
+			for (int i=0; i<4; i++) {
+				value[chu][i] =value[chu][i]/div;
+			}
+
+			if (m==michisu-1)break; //最後の計算まで終わったらfor文を抜ける
+
+			//注目式以外のβの係数を0にする
+			for (int i=0; i<3; i++) {
+				if (i!=chu) {//注目式以外
+					div = value[i][chu+1];//値が途中で変わってしまうのでとっておく
+					for (int j=0; j<4; j++) {//４つの係数全てに対して計算を行う
+						value[i][j]=value[i][j] - div*value[chu][j];//
+					}
+				}
+			}
+		}
+
+		//γの値は20
+		//βの値は10-13*γ
+		//αの値は00-02*β-03*γ
+		calcAns[2]=value[2][0];//γ
+		calcAns[1]=value[1][0]-value[1][3]*calcAns[2];//β
+		calcAns[0]=value[0][0]-value[0][3]*calcAns[2];//
+
+		//x=αOA+βOB+γOC
+		PVector ax, ay, az;
+		ax=PVector.mult(OAm, calcAns[0]);
+		ay=PVector.mult(OBm, calcAns[1]);
+		az=PVector.mult(OCm, calcAns[2]);
+		PVector ansPosition = PVector.add(ax, ay);
+		ansPosition.add(az);
+
+		return ansPosition;
+	}
+	private void drawCube() {
+		for (int i=0; i<3; i++) {
+
+			float x=points[i].x;
+			float y=points[i].y;
+			float z=points[i].z;
+			PVector p=new PVector(x, y, z);
+
+			if (changeSketchView) {//マージが設定されていたら
+				p = calcChangePosition(p);
+			}
+
+			pushMatrix();
+			translate(p.x, p.y, p.z);
+			if (i==0)
+				fill(#ff0000);
+			if (i==1)
+				fill(#00ff00);
+			if (i==2)
+				fill(#0000ff);
+			noStroke();
+			float box=p.z;
+			box(box/94, box/94, box/94); 
+			popMatrix();
+		}
 	}
 }
 

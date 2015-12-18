@@ -24,7 +24,7 @@ final int LENGTH=1145;//デプスデータを格納している配列の大き�
 final int data_width=640;//画像の解像度
 final int data_height=480;//画像の解像度
 
-final float screenZoom=1.2;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
+final float screenZoom=1.6;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
 
 private TakeShot take;//データの保存に利用
 private Tool tool;//ツールバー
@@ -38,8 +38,15 @@ static int frameset;//
 static boolean animation;//アニメーションしてもいいかどうか
 static int framecount=5;//設定するフレームカウント
 
+boolean mergeMode = false;
+boolean showTestMerge=false;
+
+private int margesketch1 = 0;
+private int margesketch2 = 0;
+
 SimpleOpenNI context;//カメラ更新用
 static int oldToolNumber;
+PVector OAm, OBm, OCm;
 
 String getParentFilePath(String path, int n) {//n階層上のファイルパスを取得
 	File f=new File(path);
@@ -129,9 +136,12 @@ void draw() {
 		//todo
 		//useshot系データの描画
 		for (int i=0; i<data.size (); i++) {//各種データの操作と描画
-			data.get(i).update();
-
-			if (tool.getMovMode()) {//trueで静止画モード,falseで動画モード
+			if(!mergeMode){//マージモードオフの時はデータそれぞれの描画をアップデートする
+				data.get(i).update();			
+			}else{//マージオンの時は指定データのみをそれぞれアップデートする
+				data.get(margesketch1).update();
+				data.get(margesketch2).update();
+			}if (tool.getMovMode()) {//trueで静止画モード,falseで動画モード
 			} else {
 				take.draw();
 				take.save();//更新する
@@ -148,9 +158,6 @@ void draw() {
 }
 
 void mousePressed() {
-	//検証用
-	//  println(tool.nowToolNumber);
-
 	//切り替え
 
 	//線の太さをペンのボタンで変更する
@@ -158,20 +165,31 @@ void mousePressed() {
 
 	if (tool.getMode()) {
 		if (!tool.pointOver(mouseX, mouseY)) {//ツールバーに重なってないのなら
-			data.get(tool.nowDataNumber).addLine();//線を追加
+			if(!mergeMode)
+				data.get(tool.nowDataNumber).addLine();//線を追加
+			else{//マージモードなら
+				int num = data.get(tool.nowDataNumber).pointNum;
+				println("PCanvas "+num+" "+data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY));
+				if (num<3) {
+					data.get(tool.nowDataNumber).points[data.get(tool.nowDataNumber).pointNum]=data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY);
+					data.get(tool.nowDataNumber).pointNum++;
+					//data.get(nowDataNumber).addPoint(mouseX, mouseY);
+				} else if (num==3) {
+					//三点のリセット
+					for (int i=0; i<3; i++) {
+						data.get(tool.nowDataNumber).points[i]=new PVector(0, 0, 0);
+					}
+					data.get(tool.nowDataNumber).pointNum=0;
+				}
+				println("mousePressed end");
+			}
+
 		}
 	} else {//ツールバーに重なっていたら
 		take.mousePressed();
 	}
 
 	if (tool.pointOver(mouseX, mouseY)) {//ツールバーに重なっている時
-		//println("重なってる");
-		/*
-    if (oldToolNumber==tool.nowToolNumber) {//もし複数回クリックならば
-     println("複数回クリック:number"+oldToolNumber);
-     //data.get(tool.nowDataNumber).changeDrawMode();
-     }
-     */
 	}
 }
 
@@ -227,6 +245,7 @@ void mouseDragged() {
 			}
 		}
 	} else {//それ以外
+		if(mergeMode) return;
 		//ツールごとの設定
 		if (tool.getMode()) {
 			if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
@@ -315,6 +334,11 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 				data.get(tool.nowDataNumber).matrixReset();
 			else
 				tool.matrixReset();
+
+			if(showTestMerge){
+				showTestMerge=!showTestMerge;
+				mergeMode = !mergeMode;
+			}
 			break;
 			case LEFT:
 			case RIGHT:
@@ -369,30 +393,30 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 			println("animationの切り替え animation:"+animation);
 			//println("");
 			break;
-			case '1'://線の太さを変える
-			setLineW=3;
-			println("Line : 1");
-			break;
-			case '2':
-			setLineW=5;
-			println("Line : 2");
-			break;
-			case '3':
-			setLineW=7;
-			println("Line : 3");
-			break;
-			case '4':
-			setLineW=9;
-			println("Line : 4");
-			break;
-			case '5':
-			setLineW=11;
-			println("Line : 5");
-			break;
-			case '6':
-			setLineW=13;
-			println("Line : 6");
-			break;
+			//			case '1'://線の太さを変える
+			//			setLineW=3;
+			//			println("Line : 1");
+			//			break;
+			//			case '2':
+			//			setLineW=5;
+			//			println("Line : 2");
+			//			break;
+			//			case '3':
+			//			setLineW=7;
+			//			println("Line : 3");
+			//			break;
+			//			case '4':
+			//			setLineW=9;
+			//			println("Line : 4");
+			//			break;
+			//			case '5':
+			//			setLineW=11;
+			//			println("Line : 5");
+			//			break;
+			//			case '6':
+			//			setLineW=13;
+			//			println("Line : 6");
+			//			break;
 
 			case '8':
 			data.get(tool.nowDataNumber).undo();
@@ -400,6 +424,14 @@ public void keyPressed(java.awt.event.KeyEvent e) {
 
 			case '9':
 			data.get(tool.nowDataNumber).redo();
+			break;
+
+			case 'M'://merge mode
+			mergeMode=!mergeMode;
+			break;
+
+			case 'B':
+			showMergeView();
 			break;
 
 
@@ -475,7 +507,6 @@ void addThumbnail(PImage g){
 	}
 }
 
-
 //データ画面
 class SecondApplet extends PApplet {
 	//サムネイル表示用
@@ -483,19 +514,25 @@ class SecondApplet extends PApplet {
 	FileList p;//フォルダの中身一覧
 	int imgNum = 0;//画像数
 	float scrollY=0;//スクロール量
+	//	int(480*screenZoom)
 
 	//新しいデータを追加するボタン
 	private Button addData;
 
 	void setup() {
-		size( SecondAppletW, SecondAppletH );
+		//		size( SecondAppletW, SecondAppletH );
+		size( SecondAppletW, int(480*screenZoom) );
 		p = new FileList(path);
 		println("p "+p.getFileList().length);
 		//		console(p.getFileList());
 	}
 
 	void draw() {
-		background(255);
+		if(mergeMode)
+			background(255,200,200);
+		else
+			background(255);
+
 		fill(255, 0, 0);
 		ellipse( mouseX, mouseY, 10, 10 );
 
@@ -564,8 +601,22 @@ class SecondApplet extends PApplet {
 				thumbnailButton.get(i).setSelected(false);
 				println(i+" : 押されました");
 
-				//TODO : ツール番号を変更する
+				//ツール番号を変更する
+				//				int preNumber = tool.nowDataNumber;
+				int preDrawMode = data.get(tool.nowDataNumber).draw_mode;
 				tool.nowDataNumber=i;
+				margesketch2 = i;
+				//表示を新しい一枚に変更する draw_modeは0~3
+				for (int j=0; j<data.size (); j++) {
+					if (j==tool.nowDataNumber)//選択中のデータならば
+						data.get(j).draw_mode=preDrawMode;//表示
+					else//それ以外
+						data.get(j).draw_mode=3;//非表示
+				}
+
+
+
+				println("マージ元:0,マージ対象:"+i);
 			}
 		}
 	}
@@ -592,8 +643,55 @@ class SecondApplet extends PApplet {
 				data.get(tool.nowDataNumber).changeDrawMode();
 				println("描画を変更 "+data.get(tool.nowDataNumber).draw_mode);
 				break;
+
+				case 'M'://merge mode
+				mergeMode=!mergeMode;
+				break;
 			}
 		}
 
+	}
+}
+
+void showMergeView(){
+	int sketch1=margesketch1;//マージ元スケッチの番号
+	int sketch2=margesketch2;//変換されるスケッチの番号
+	println("マージ　："+sketch1+" + "+sketch2);
+
+	if (showTestMerge) {//表示設定担っている時はとりあえず非表示に設定する
+		println("非表示");
+		showTestMerge=false;
+		data.get(sketch2).changeSketchView =false;
+		data.get(sketch1).draw_mode=1;
+		data.get(sketch2).draw_mode=1;
+		showTestMerge=false;
+	}
+
+	if (data.get(sketch1).pointNum!=3 || data.get(sketch2).pointNum!=3) {//マージ用のポイントが揃っていなかったら中止
+		println("点の数が足りません");
+		return;
+	}
+	//両方表示する
+	showTestMerge=!showTestMerge;//両方表示する
+
+	if (showTestMerge) {//trueならば計算しなおして表示する
+		println("計算を開始します");
+
+		//軸にsketch1の軸を指定する
+		//calcChangePosition();
+		OAm=data.get(sketch1).calcChangeAxis()[0];
+		OBm=data.get(sketch1).calcChangeAxis()[1];
+		OCm=data.get(sketch1).calcChangeAxis()[2];
+		PVector []ttt = data.get(sketch2).calcChangeAxis();
+
+		println("OA "+OAm);
+		println("OB "+OBm);
+		println("OC "+OCm);
+
+		//マージするsketch2の表示方法を変更する
+		data.get(sketch2).changeSketchView = !data.get(sketch2).changeSketchView;
+		//表示方法をかえる
+		data.get(sketch1).draw_mode=2;
+		data.get(sketch2).draw_mode=2;
 	}
 }
