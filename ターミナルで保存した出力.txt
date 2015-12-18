@@ -1,0 +1,3252 @@
+^[[A
+Last login: Tue Dec 15 07:44:50 on ttys000
+You have mail.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8334
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		Could not open "1d27/0600@20/7": Failed to set USB interface!
+
+
+SimpleOpenNI Error: Can't open device:		Could not open "1d27/0600@20/7": Failed to set USB interface!
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		Could not open "1d27/0600@20/7": Failed to set USB interface!
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+fileArray[0]=20151110_164831.dsd
+fileArray[1]=20151110_164831.dsd.png
+fileArray[2]=20151110_164941.dsd
+fileArray[3]=20151110_164941.dsd.png
+fileArray[4]=20151110_172733.dsd
+fileArray[5]=20151110_172733.dsd.png
+fileArray[6]=20151110_17740.dsd
+fileArray[7]=20151110_17740.dsd.png
+fileArray[8]=20151110_17855.dsd
+fileArray[9]=20151110_17855.dsd.png
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd
+fileArray[11]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[12]=20151215_24247.dsd
+fileArray[13]=20151215_24247.dsd.png
+fileArray[14]=20151215_34750.dsd
+fileArray[15]=20151215_34750.dsd.png
+fileArray[16]=20151215_35150.dsd
+fileArray[17]=20151215_35150.dsd.png
+fileArray[18]=2015124_214725.dsd
+fileArray[19]=2015124_214725.dsd.png
+imgNum : 0
+end : 20
+i 0 : 20151110_164831.dsdをCHECK
+fileArray[0]=20151110_164831.dsd.png
+fileArray[1]=20151110_164941.dsd
+fileArray[2]=20151110_164941.dsd.png
+fileArray[3]=20151110_172733.dsd
+fileArray[4]=20151110_172733.dsd.png
+fileArray[5]=20151110_17740.dsd
+fileArray[6]=20151110_17740.dsd.png
+fileArray[7]=20151110_17855.dsd
+fileArray[8]=20151110_17855.dsd.png
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[11]=20151215_24247.dsd
+fileArray[12]=20151215_24247.dsd.png
+fileArray[13]=20151215_34750.dsd
+fileArray[14]=20151215_34750.dsd.png
+fileArray[15]=20151215_35150.dsd
+fileArray[16]=20151215_35150.dsd.png
+fileArray[17]=2015124_214725.dsd
+fileArray[18]=2015124_214725.dsd.png
+imgNum : 0
+end : 19
+i 0 : 20151110_164831.dsd.pngをCHECK
+imgNum : 1
+end : 19
+i 1 : 20151110_164941.dsdをCHECK
+fileArray[1]=20151110_164941.dsd.png
+fileArray[2]=20151110_172733.dsd
+fileArray[3]=20151110_172733.dsd.png
+fileArray[4]=20151110_17740.dsd
+fileArray[5]=20151110_17740.dsd.png
+fileArray[6]=20151110_17855.dsd
+fileArray[7]=20151110_17855.dsd.png
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[10]=20151215_24247.dsd
+fileArray[11]=20151215_24247.dsd.png
+fileArray[12]=20151215_34750.dsd
+fileArray[13]=20151215_34750.dsd.png
+fileArray[14]=20151215_35150.dsd
+fileArray[15]=20151215_35150.dsd.png
+fileArray[16]=2015124_214725.dsd
+fileArray[17]=2015124_214725.dsd.png
+imgNum : 1
+end : 18
+i 1 : 20151110_164941.dsd.pngをCHECK
+imgNum : 2
+end : 18
+i 2 : 20151110_172733.dsdをCHECK
+fileArray[2]=20151110_172733.dsd.png
+fileArray[3]=20151110_17740.dsd
+fileArray[4]=20151110_17740.dsd.png
+fileArray[5]=20151110_17855.dsd
+fileArray[6]=20151110_17855.dsd.png
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[9]=20151215_24247.dsd
+fileArray[10]=20151215_24247.dsd.png
+fileArray[11]=20151215_34750.dsd
+fileArray[12]=20151215_34750.dsd.png
+fileArray[13]=20151215_35150.dsd
+fileArray[14]=20151215_35150.dsd.png
+fileArray[15]=2015124_214725.dsd
+fileArray[16]=2015124_214725.dsd.png
+imgNum : 2
+end : 17
+i 2 : 20151110_172733.dsd.pngをCHECK
+imgNum : 3
+end : 17
+i 3 : 20151110_17740.dsdをCHECK
+fileArray[3]=20151110_17740.dsd.png
+fileArray[4]=20151110_17855.dsd
+fileArray[5]=20151110_17855.dsd.png
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[8]=20151215_24247.dsd
+fileArray[9]=20151215_24247.dsd.png
+fileArray[10]=20151215_34750.dsd
+fileArray[11]=20151215_34750.dsd.png
+fileArray[12]=20151215_35150.dsd
+fileArray[13]=20151215_35150.dsd.png
+fileArray[14]=2015124_214725.dsd
+fileArray[15]=2015124_214725.dsd.png
+imgNum : 3
+end : 16
+i 3 : 20151110_17740.dsd.pngをCHECK
+imgNum : 4
+end : 16
+i 4 : 20151110_17855.dsdをCHECK
+fileArray[4]=20151110_17855.dsd.png
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[7]=20151215_24247.dsd
+fileArray[8]=20151215_24247.dsd.png
+fileArray[9]=20151215_34750.dsd
+fileArray[10]=20151215_34750.dsd.png
+fileArray[11]=20151215_35150.dsd
+fileArray[12]=20151215_35150.dsd.png
+fileArray[13]=2015124_214725.dsd
+fileArray[14]=2015124_214725.dsd.png
+imgNum : 4
+end : 15
+i 4 : 20151110_17855.dsd.pngをCHECK
+imgNum : 5
+end : 15
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[6]=20151215_24247.dsd
+fileArray[7]=20151215_24247.dsd.png
+fileArray[8]=20151215_34750.dsd
+fileArray[9]=20151215_34750.dsd.png
+fileArray[10]=20151215_35150.dsd
+fileArray[11]=20151215_35150.dsd.png
+fileArray[12]=2015124_214725.dsd
+fileArray[13]=2015124_214725.dsd.png
+imgNum : 5
+end : 14
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+imgNum : 6
+end : 14
+i 6 : 20151215_24247.dsdをCHECK
+fileArray[6]=20151215_24247.dsd.png
+fileArray[7]=20151215_34750.dsd
+fileArray[8]=20151215_34750.dsd.png
+fileArray[9]=20151215_35150.dsd
+fileArray[10]=20151215_35150.dsd.png
+fileArray[11]=2015124_214725.dsd
+fileArray[12]=2015124_214725.dsd.png
+imgNum : 6
+end : 13
+i 6 : 20151215_24247.dsd.pngをCHECK
+imgNum : 7
+end : 13
+i 7 : 20151215_34750.dsdをCHECK
+fileArray[7]=20151215_34750.dsd.png
+fileArray[8]=20151215_35150.dsd
+fileArray[9]=20151215_35150.dsd.png
+fileArray[10]=2015124_214725.dsd
+fileArray[11]=2015124_214725.dsd.png
+imgNum : 7
+end : 12
+i 7 : 20151215_34750.dsd.pngをCHECK
+imgNum : 8
+end : 12
+i 8 : 20151215_35150.dsdをCHECK
+fileArray[8]=20151215_35150.dsd.png
+fileArray[9]=2015124_214725.dsd
+fileArray[10]=2015124_214725.dsd.png
+imgNum : 8
+end : 11
+i 8 : 20151215_35150.dsd.pngをCHECK
+imgNum : 9
+end : 11
+i 9 : 2015124_214725.dsdをCHECK
+fileArray[9]=2015124_214725.dsd.png
+imgNum : 9
+end : 10
+i 9 : 2015124_214725.dsd.pngをCHECK
+imgNum : 10
+end : 10
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+end
+unLoadedThumbnailButton 10
+check i 0
+UseShot.pde:570:0:570:0: NullPointerException
+ckawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8917
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+fileArray[0]=20151110_164831.dsd
+fileArray[1]=20151110_164831.dsd.png
+fileArray[2]=20151110_164941.dsd
+fileArray[3]=20151110_164941.dsd.png
+fileArray[4]=20151110_172733.dsd
+fileArray[5]=20151110_172733.dsd.png
+fileArray[6]=20151110_17740.dsd
+fileArray[7]=20151110_17740.dsd.png
+fileArray[8]=20151110_17855.dsd
+fileArray[9]=20151110_17855.dsd.png
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd
+fileArray[11]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[12]=20151215_24247.dsd
+fileArray[13]=20151215_24247.dsd.png
+fileArray[14]=20151215_34750.dsd
+fileArray[15]=20151215_34750.dsd.png
+fileArray[16]=20151215_35150.dsd
+fileArray[17]=20151215_35150.dsd.png
+fileArray[18]=2015124_214725.dsd
+fileArray[19]=2015124_214725.dsd.png
+imgNum : 0
+end : 20
+i 0 : 20151110_164831.dsdをCHECK
+fileArray[0]=20151110_164831.dsd.png
+fileArray[1]=20151110_164941.dsd
+fileArray[2]=20151110_164941.dsd.png
+fileArray[3]=20151110_172733.dsd
+fileArray[4]=20151110_172733.dsd.png
+fileArray[5]=20151110_17740.dsd
+fileArray[6]=20151110_17740.dsd.png
+fileArray[7]=20151110_17855.dsd
+fileArray[8]=20151110_17855.dsd.png
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[11]=20151215_24247.dsd
+fileArray[12]=20151215_24247.dsd.png
+fileArray[13]=20151215_34750.dsd
+fileArray[14]=20151215_34750.dsd.png
+fileArray[15]=20151215_35150.dsd
+fileArray[16]=20151215_35150.dsd.png
+fileArray[17]=2015124_214725.dsd
+fileArray[18]=2015124_214725.dsd.png
+imgNum : 0
+end : 19
+i 0 : 20151110_164831.dsd.pngをCHECK
+imgNum : 1
+end : 19
+i 1 : 20151110_164941.dsdをCHECK
+fileArray[1]=20151110_164941.dsd.png
+fileArray[2]=20151110_172733.dsd
+fileArray[3]=20151110_172733.dsd.png
+fileArray[4]=20151110_17740.dsd
+fileArray[5]=20151110_17740.dsd.png
+fileArray[6]=20151110_17855.dsd
+fileArray[7]=20151110_17855.dsd.png
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[10]=20151215_24247.dsd
+fileArray[11]=20151215_24247.dsd.png
+fileArray[12]=20151215_34750.dsd
+fileArray[13]=20151215_34750.dsd.png
+fileArray[14]=20151215_35150.dsd
+fileArray[15]=20151215_35150.dsd.png
+fileArray[16]=2015124_214725.dsd
+fileArray[17]=2015124_214725.dsd.png
+imgNum : 1
+end : 18
+i 1 : 20151110_164941.dsd.pngをCHECK
+imgNum : 2
+end : 18
+i 2 : 20151110_172733.dsdをCHECK
+fileArray[2]=20151110_172733.dsd.png
+fileArray[3]=20151110_17740.dsd
+fileArray[4]=20151110_17740.dsd.png
+fileArray[5]=20151110_17855.dsd
+fileArray[6]=20151110_17855.dsd.png
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[9]=20151215_24247.dsd
+fileArray[10]=20151215_24247.dsd.png
+fileArray[11]=20151215_34750.dsd
+fileArray[12]=20151215_34750.dsd.png
+fileArray[13]=20151215_35150.dsd
+fileArray[14]=20151215_35150.dsd.png
+fileArray[15]=2015124_214725.dsd
+fileArray[16]=2015124_214725.dsd.png
+imgNum : 2
+end : 17
+i 2 : 20151110_172733.dsd.pngをCHECK
+imgNum : 3
+end : 17
+i 3 : 20151110_17740.dsdをCHECK
+fileArray[3]=20151110_17740.dsd.png
+fileArray[4]=20151110_17855.dsd
+fileArray[5]=20151110_17855.dsd.png
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[8]=20151215_24247.dsd
+fileArray[9]=20151215_24247.dsd.png
+fileArray[10]=20151215_34750.dsd
+fileArray[11]=20151215_34750.dsd.png
+fileArray[12]=20151215_35150.dsd
+fileArray[13]=20151215_35150.dsd.png
+fileArray[14]=2015124_214725.dsd
+fileArray[15]=2015124_214725.dsd.png
+imgNum : 3
+end : 16
+i 3 : 20151110_17740.dsd.pngをCHECK
+imgNum : 4
+end : 16
+i 4 : 20151110_17855.dsdをCHECK
+fileArray[4]=20151110_17855.dsd.png
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[7]=20151215_24247.dsd
+fileArray[8]=20151215_24247.dsd.png
+fileArray[9]=20151215_34750.dsd
+fileArray[10]=20151215_34750.dsd.png
+fileArray[11]=20151215_35150.dsd
+fileArray[12]=20151215_35150.dsd.png
+fileArray[13]=2015124_214725.dsd
+fileArray[14]=2015124_214725.dsd.png
+imgNum : 4
+end : 15
+i 4 : 20151110_17855.dsd.pngをCHECK
+imgNum : 5
+end : 15
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[6]=20151215_24247.dsd
+fileArray[7]=20151215_24247.dsd.png
+fileArray[8]=20151215_34750.dsd
+fileArray[9]=20151215_34750.dsd.png
+fileArray[10]=20151215_35150.dsd
+fileArray[11]=20151215_35150.dsd.png
+fileArray[12]=2015124_214725.dsd
+fileArray[13]=2015124_214725.dsd.png
+imgNum : 5
+end : 14
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+imgNum : 6
+end : 14
+i 6 : 20151215_24247.dsdをCHECK
+fileArray[6]=20151215_24247.dsd.png
+fileArray[7]=20151215_34750.dsd
+fileArray[8]=20151215_34750.dsd.png
+fileArray[9]=20151215_35150.dsd
+fileArray[10]=20151215_35150.dsd.png
+fileArray[11]=2015124_214725.dsd
+fileArray[12]=2015124_214725.dsd.png
+imgNum : 6
+end : 13
+i 6 : 20151215_24247.dsd.pngをCHECK
+imgNum : 7
+end : 13
+i 7 : 20151215_34750.dsdをCHECK
+fileArray[7]=20151215_34750.dsd.png
+fileArray[8]=20151215_35150.dsd
+fileArray[9]=20151215_35150.dsd.png
+fileArray[10]=2015124_214725.dsd
+fileArray[11]=2015124_214725.dsd.png
+imgNum : 7
+end : 12
+i 7 : 20151215_34750.dsd.pngをCHECK
+imgNum : 8
+end : 12
+i 8 : 20151215_35150.dsdをCHECK
+fileArray[8]=20151215_35150.dsd.png
+fileArray[9]=2015124_214725.dsd
+fileArray[10]=2015124_214725.dsd.png
+imgNum : 8
+end : 11
+i 8 : 20151215_35150.dsd.pngをCHECK
+imgNum : 9
+end : 11
+i 9 : 2015124_214725.dsdをCHECK
+fileArray[9]=2015124_214725.dsd.png
+imgNum : 9
+end : 10
+i 9 : 2015124_214725.dsd.pngをCHECK
+imgNum : 10
+end : 10
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+end
+unLoadedThumbnailButton 10
+check i 0
+UseShot.pde:570:0:570:0: NullPointerException
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8204
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@471719b6
+1 is sun.awt.CGraphicsDevice@3d992030
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+fileArray[0]=20151110_164831.dsd
+fileArray[1]=20151110_164831.dsd.png
+fileArray[2]=20151110_164941.dsd
+fileArray[3]=20151110_164941.dsd.png
+fileArray[4]=20151110_172733.dsd
+fileArray[5]=20151110_172733.dsd.png
+fileArray[6]=20151110_17740.dsd
+fileArray[7]=20151110_17740.dsd.png
+fileArray[8]=20151110_17855.dsd
+fileArray[9]=20151110_17855.dsd.png
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd
+fileArray[11]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[12]=20151215_24247.dsd
+fileArray[13]=20151215_24247.dsd.png
+fileArray[14]=20151215_34750.dsd
+fileArray[15]=20151215_34750.dsd.png
+fileArray[16]=20151215_35150.dsd
+fileArray[17]=20151215_35150.dsd.png
+fileArray[18]=2015124_214725.dsd
+fileArray[19]=2015124_214725.dsd.png
+imgNum : 0
+end : 20
+i 0 : 20151110_164831.dsdをCHECK
+fileArray[0]=20151110_164831.dsd.png
+fileArray[1]=20151110_164941.dsd
+fileArray[2]=20151110_164941.dsd.png
+fileArray[3]=20151110_172733.dsd
+fileArray[4]=20151110_172733.dsd.png
+fileArray[5]=20151110_17740.dsd
+fileArray[6]=20151110_17740.dsd.png
+fileArray[7]=20151110_17855.dsd
+fileArray[8]=20151110_17855.dsd.png
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd
+fileArray[10]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[11]=20151215_24247.dsd
+fileArray[12]=20151215_24247.dsd.png
+fileArray[13]=20151215_34750.dsd
+fileArray[14]=20151215_34750.dsd.png
+fileArray[15]=20151215_35150.dsd
+fileArray[16]=20151215_35150.dsd.png
+fileArray[17]=2015124_214725.dsd
+fileArray[18]=2015124_214725.dsd.png
+imgNum : 0
+end : 19
+i 0 : 20151110_164831.dsd.pngをCHECK
+imgNum : 1
+end : 19
+i 1 : 20151110_164941.dsdをCHECK
+fileArray[1]=20151110_164941.dsd.png
+fileArray[2]=20151110_172733.dsd
+fileArray[3]=20151110_172733.dsd.png
+fileArray[4]=20151110_17740.dsd
+fileArray[5]=20151110_17740.dsd.png
+fileArray[6]=20151110_17855.dsd
+fileArray[7]=20151110_17855.dsd.png
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd
+fileArray[9]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[10]=20151215_24247.dsd
+fileArray[11]=20151215_24247.dsd.png
+fileArray[12]=20151215_34750.dsd
+fileArray[13]=20151215_34750.dsd.png
+fileArray[14]=20151215_35150.dsd
+fileArray[15]=20151215_35150.dsd.png
+fileArray[16]=2015124_214725.dsd
+fileArray[17]=2015124_214725.dsd.png
+imgNum : 1
+end : 18
+i 1 : 20151110_164941.dsd.pngをCHECK
+imgNum : 2
+end : 18
+i 2 : 20151110_172733.dsdをCHECK
+fileArray[2]=20151110_172733.dsd.png
+fileArray[3]=20151110_17740.dsd
+fileArray[4]=20151110_17740.dsd.png
+fileArray[5]=20151110_17855.dsd
+fileArray[6]=20151110_17855.dsd.png
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd
+fileArray[8]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[9]=20151215_24247.dsd
+fileArray[10]=20151215_24247.dsd.png
+fileArray[11]=20151215_34750.dsd
+fileArray[12]=20151215_34750.dsd.png
+fileArray[13]=20151215_35150.dsd
+fileArray[14]=20151215_35150.dsd.png
+fileArray[15]=2015124_214725.dsd
+fileArray[16]=2015124_214725.dsd.png
+imgNum : 2
+end : 17
+i 2 : 20151110_172733.dsd.pngをCHECK
+imgNum : 3
+end : 17
+i 3 : 20151110_17740.dsdをCHECK
+fileArray[3]=20151110_17740.dsd.png
+fileArray[4]=20151110_17855.dsd
+fileArray[5]=20151110_17855.dsd.png
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd
+fileArray[7]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[8]=20151215_24247.dsd
+fileArray[9]=20151215_24247.dsd.png
+fileArray[10]=20151215_34750.dsd
+fileArray[11]=20151215_34750.dsd.png
+fileArray[12]=20151215_35150.dsd
+fileArray[13]=20151215_35150.dsd.png
+fileArray[14]=2015124_214725.dsd
+fileArray[15]=2015124_214725.dsd.png
+imgNum : 3
+end : 16
+i 3 : 20151110_17740.dsd.pngをCHECK
+imgNum : 4
+end : 16
+i 4 : 20151110_17855.dsdをCHECK
+fileArray[4]=20151110_17855.dsd.png
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd
+fileArray[6]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[7]=20151215_24247.dsd
+fileArray[8]=20151215_24247.dsd.png
+fileArray[9]=20151215_34750.dsd
+fileArray[10]=20151215_34750.dsd.png
+fileArray[11]=20151215_35150.dsd
+fileArray[12]=20151215_35150.dsd.png
+fileArray[13]=2015124_214725.dsd
+fileArray[14]=2015124_214725.dsd.png
+imgNum : 4
+end : 15
+i 4 : 20151110_17855.dsd.pngをCHECK
+imgNum : 5
+end : 15
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+fileArray[5]=20151110_17855.dsd20151110_1790.dsd.png
+fileArray[6]=20151215_24247.dsd
+fileArray[7]=20151215_24247.dsd.png
+fileArray[8]=20151215_34750.dsd
+fileArray[9]=20151215_34750.dsd.png
+fileArray[10]=20151215_35150.dsd
+fileArray[11]=20151215_35150.dsd.png
+fileArray[12]=2015124_214725.dsd
+fileArray[13]=2015124_214725.dsd.png
+imgNum : 5
+end : 14
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+imgNum : 6
+end : 14
+i 6 : 20151215_24247.dsdをCHECK
+fileArray[6]=20151215_24247.dsd.png
+fileArray[7]=20151215_34750.dsd
+fileArray[8]=20151215_34750.dsd.png
+fileArray[9]=20151215_35150.dsd
+fileArray[10]=20151215_35150.dsd.png
+fileArray[11]=2015124_214725.dsd
+fileArray[12]=2015124_214725.dsd.png
+imgNum : 6
+end : 13
+i 6 : 20151215_24247.dsd.pngをCHECK
+imgNum : 7
+end : 13
+i 7 : 20151215_34750.dsdをCHECK
+fileArray[7]=20151215_34750.dsd.png
+fileArray[8]=20151215_35150.dsd
+fileArray[9]=20151215_35150.dsd.png
+fileArray[10]=2015124_214725.dsd
+fileArray[11]=2015124_214725.dsd.png
+imgNum : 7
+end : 12
+i 7 : 20151215_34750.dsd.pngをCHECK
+imgNum : 8
+end : 12
+i 8 : 20151215_35150.dsdをCHECK
+fileArray[8]=20151215_35150.dsd.png
+fileArray[9]=2015124_214725.dsd
+fileArray[10]=2015124_214725.dsd.png
+imgNum : 8
+end : 11
+i 8 : 20151215_35150.dsd.pngをCHECK
+imgNum : 9
+end : 11
+i 9 : 2015124_214725.dsdをCHECK
+fileArray[9]=2015124_214725.dsd.png
+imgNum : 9
+end : 10
+i 9 : 2015124_214725.dsd.pngをCHECK
+imgNum : 10
+end : 10
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+作成 20151110_164831.dsd.png
+作成 20151110_164941.dsd.png
+作成 20151110_172733.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8581
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsdをCHECK
+i 4 : 20151110_17855.dsd.pngをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 6 : 20151215_24247.dsdをCHECK
+i 6 : 20151215_24247.dsd.pngをCHECK
+i 7 : 20151215_34750.dsdをCHECK
+i 7 : 20151215_34750.dsd.pngをCHECK
+i 8 : 20151215_35150.dsdをCHECK
+i 8 : 20151215_35150.dsd.pngをCHECK
+i 9 : 2015124_214725.dsdをCHECK
+i 9 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+作成 0 20151110_164831.dsd.png
+作成 1 20151110_164941.dsd.png
+作成 2 20151110_172733.dsd.png
+作成 3 20151110_17740.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8012
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@66c540d0
+1 is sun.awt.CGraphicsDevice@20224c66
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsdをCHECK
+i 4 : 20151110_17855.dsd.pngをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 6 : 20151215_24247.dsdをCHECK
+i 6 : 20151215_24247.dsd.pngをCHECK
+i 7 : 20151215_34750.dsdをCHECK
+i 7 : 20151215_34750.dsd.pngをCHECK
+i 8 : 20151215_35150.dsdをCHECK
+i 8 : 20151215_35150.dsd.pngをCHECK
+i 9 : 2015124_214725.dsdをCHECK
+i 9 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+作成 0 20151110_164831.dsd.png作成 1 20151110_164941.dsd.png作成 2 20151110_172733.dsd.pngjava.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8570
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 21
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsdをCHECK
+i 4 : 20151110_17855.dsd.pngをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 5 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 6 : 20151215_24247.dsdをCHECK
+i 6 : 20151215_24247.dsd.pngをCHECK
+i 7 : 20151215_34750.dsdをCHECK
+i 7 : 20151215_34750.dsd.pngをCHECK
+i 8 : 20151215_35150.dsdをCHECK
+i 8 : 20151215_35150.dsd.pngをCHECK
+i 9 : 2015124_214725.dsdをCHECK
+i 9 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd.png
+check i 5 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 6 : 20151215_24247.dsd.png
+check i 7 : 20151215_34750.dsd.png
+check i 8 : 20151215_35150.dsd.png
+check i 9 : 2015124_214725.dsd.png
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+check i 19 : 
+check i 20 : 
+サムネイルボタンの作成 run console3 img num = 10
+作成 0 20151110_164831.dsd.png2
+3
+3
+作成 1 20151110_164941.dsd.png2
+3
+3
+作成 2 20151110_172733.dsd.png2
+3
+3
+作成 3 20151110_17740.dsd.png2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1338)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+clCould not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8512
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 19
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 5 : 20151215_24247.dsdをCHECK
+i 5 : 20151215_24247.dsd.pngをCHECK
+i 6 : 20151215_34750.dsdをCHECK
+i 6 : 20151215_34750.dsd.pngをCHECK
+i 7 : 20151215_35150.dsdをCHECK
+i 7 : 20151215_35150.dsd.pngをCHECK
+i 8 : 2015124_214725.dsdをCHECK
+i 8 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 5 : 20151215_24247.dsd.png
+check i 6 : 20151215_34750.dsd.png
+check i 7 : 20151215_35150.dsd.png
+check i 8 : 2015124_214725.dsd.png
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+サムネイルボタンの作成 run console3 img num = 9
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_172733.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1339)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8474
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 19
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 5 : 20151215_24247.dsdをCHECK
+i 5 : 20151215_24247.dsd.pngをCHECK
+i 6 : 20151215_34750.dsdをCHECK
+i 6 : 20151215_34750.dsd.pngをCHECK
+i 7 : 20151215_35150.dsdをCHECK
+i 7 : 20151215_35150.dsd.pngをCHECK
+i 8 : 2015124_214725.dsdをCHECK
+i 8 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 5 : 20151215_24247.dsd.png
+check i 6 : 20151215_34750.dsd.png
+check i 7 : 20151215_35150.dsd.png
+check i 8 : 2015124_214725.dsd.png
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+サムネイルボタンの作成 run console3 img num = 9
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_172733.dsd.png
+2
+3
+4
+作成 3 20151110_17740.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1339)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8593
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 19
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_172733.dsdをCHECK
+i 2 : 20151110_172733.dsd.pngをCHECK
+i 3 : 20151110_17740.dsdをCHECK
+i 3 : 20151110_17740.dsd.pngをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 5 : 20151215_24247.dsdをCHECK
+i 5 : 20151215_24247.dsd.pngをCHECK
+i 6 : 20151215_34750.dsdをCHECK
+i 6 : 20151215_34750.dsd.pngをCHECK
+i 7 : 20151215_35150.dsdをCHECK
+i 7 : 20151215_35150.dsd.pngをCHECK
+i 8 : 2015124_214725.dsdをCHECK
+i 8 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_172733.dsd.png
+check i 3 : 20151110_17740.dsd.png
+check i 4 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 5 : 20151215_24247.dsd.png
+check i 6 : 20151215_34750.dsd.png
+check i 7 : 20151215_35150.dsd.png
+check i 8 : 2015124_214725.dsd.png
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+サムネイルボタンの作成 run console3 img num = 9
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_172733.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1340)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8608
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 19
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_17740.dsdをCHECK
+i 2 : 20151110_17740.dsd.pngをCHECK
+i 3 : 20151110_17855.dsdをCHECK
+i 3 : 20151110_17855.dsd.pngをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 4 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 5 : 20151215_24247.dsdをCHECK
+i 5 : 20151215_24247.dsd.pngをCHECK
+i 6 : 20151215_34750.dsdをCHECK
+i 6 : 20151215_34750.dsd.pngをCHECK
+i 7 : 20151215_35150.dsdをCHECK
+i 7 : 20151215_35150.dsd.pngをCHECK
+i 8 : 2015124_214725.dsdをCHECK
+i 8 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd.png
+check i 4 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 5 : 20151215_24247.dsd.png
+check i 6 : 20151215_34750.dsd.png
+check i 7 : 20151215_35150.dsd.png
+check i 8 : 2015124_214725.dsd.png
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+check i 17 : 
+check i 18 : 
+サムネイルボタンの作成 run console3 img num = 9
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_17740.dsd.png
+2
+3
+4
+作成 3 20151110_17855.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1340)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8575
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+i 0 : .DS_StoreをCHECK
+i 0 : 20151110_164831.dsdをCHECK
+i 0 : 20151110_164831.dsd.pngをCHECK
+i 1 : 20151110_164941.dsdをCHECK
+i 1 : 20151110_164941.dsd.pngをCHECK
+i 2 : 20151110_17740.dsdをCHECK
+i 2 : 20151110_17740.dsd.pngをCHECK
+i 3 : 20151110_17855.dsd20151110_1790.dsdをCHECK
+i 3 : 20151110_17855.dsd20151110_1790.dsd.pngをCHECK
+i 4 : 20151215_24247.dsdをCHECK
+i 4 : 20151215_24247.dsd.pngをCHECK
+i 5 : 20151215_34750.dsdをCHECK
+i 5 : 20151215_34750.dsd.pngをCHECK
+i 6 : 20151215_35150.dsdをCHECK
+i 6 : 20151215_35150.dsd.pngをCHECK
+i 7 : 2015124_214725.dsdをCHECK
+i 7 : 2015124_214725.dsd.pngをCHECK
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+サムネイルボタンの作成 run console3 img num = 8
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_17740.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1340)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+kawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8956
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_17740.dsd.png
+2
+3
+4
+作成 3 20151110_17855.dsd20151110_1790.dsd.png
+2
+3
+4
+作成 4 20151215_24247.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1332)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8657
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_17740.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1332)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ clear
+
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8140
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+2
+3
+4
+作成 1 20151110_164941.dsd.png
+2
+3
+4
+作成 2 20151110_17740.dsd.png
+2
+3
+4
+作成 3 20151110_17855.dsd20151110_1790.dsd.png
+2
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1332)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8259
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+作成 1 20151110_164941.dsd.png
+作成 2 20151110_17740.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8176
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@471719b6
+1 is sun.awt.CGraphicsDevice@3d992030
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+作成 1 20151110_164941.dsd.png
+作成 2 20151110_17740.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8274
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@471719b6
+1 is sun.awt.CGraphicsDevice@3d992030
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd20151110_1790.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+作成 1 20151110_164941.dsd.png
+作成 2 20151110_17740.dsd.png
+作成 3 20151110_17855.dsd20151110_1790.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+You have mail in /var/mail/kawasemi
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8180
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 17
+run console
+check i 0 : 20151110_164831.dsd.png
+check i 1 : 20151110_164941.dsd.png
+check i 2 : 20151110_17740.dsd.png
+check i 3 : 20151110_17855.dsd.png
+check i 4 : 20151215_24247.dsd.png
+check i 5 : 20151215_34750.dsd.png
+check i 6 : 20151215_35150.dsd.png
+check i 7 : 2015124_214725.dsd.png
+check i 8 : 
+check i 9 : 
+check i 10 : 
+check i 11 : 
+check i 12 : 
+check i 13 : 
+check i 14 : 
+check i 15 : 
+check i 16 : 
+作成 0 20151110_164831.dsd.png
+作成 1 20151110_164941.dsd.png
+作成 2 20151110_17740.dsd.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+^[[ACould not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8555
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 14
+run console
+check i 0 : a のコピー 10.png
+check i 1 : a のコピー 11.png
+check i 2 : a のコピー 2.png
+check i 3 : a のコピー 3.png
+check i 4 : a のコピー 4.png
+check i 5 : a のコピー 5.png
+check i 6 : a のコピー 6.png
+check i 7 : a のコピー 7.png
+check i 8 : a のコピー 8.png
+check i 9 : a のコピー 9.png
+check i 10 : a のコピー.png
+check i 11 : a.png
+check i 12 : 
+check i 13 : 
+作成 0 a のコピー 10.png
+作成 1 a のコピー 11.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1333)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8553
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 14
+run console
+check i 0 : a のコピー 10.png
+check i 1 : a のコピー 11.png
+check i 2 : a のコピー 2.png
+check i 3 : a のコピー 3.png
+check i 4 : a のコピー 4.png
+check i 5 : a のコピー 5.png
+check i 6 : a のコピー 6.png
+check i 7 : a のコピー 7.png
+check i 8 : a のコピー 8.png
+check i 9 : a のコピー 9.png
+check i 10 : a のコピー.png
+check i 11 : a.png
+check i 12 : 
+check i 13 : 
+作成 0 a のコピー 10.png
+0 /Users/kawasemi/Desktop/dsdData/a のコピー 10.png
+作成 1 a のコピー 11.png
+1 /Users/kawasemi/Desktop/dsdData/a のコピー 11.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1334)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8536
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1334)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8626
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@10104ee8
+1 is sun.awt.CGraphicsDevice@1eac6995
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1335)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8978
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1336)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8203
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@3d992030
+1 is sun.awt.CGraphicsDevice@10104ee8
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1339)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8105
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@3d992030
+1 is sun.awt.CGraphicsDevice@10104ee8
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1340)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8588
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@471719b6
+1 is sun.awt.CGraphicsDevice@3d992030
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+ここかな 4
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1341)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+UseShot.pde:632:0:632:0: The local variable g may not have been initialized
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+UseShot.pde:632:0:632:0: The local variable g may not have been initialized
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8670
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@471719b6
+1 is sun.awt.CGraphicsDevice@3d992030
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+ここかな 4
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1343)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+^[[ACould not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8664
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+UseShot.pde:677:0:677:0: ArrayIndexOutOfBoundsException: -1
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8124
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+After initialization:
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+SimpleOpenNI Error: Can't open device:		DeviceOpen using default: no devices found
+
+
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 3
+run console
+check i 0 : a.png
+check i 1 : 
+check i 2 : 
+作成 0 a.png
+0 /Users/kawasemi/Desktop/dsdData/a.png
+end
+setup end
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+draw
+ここかな 4
+ここかな 5
+ここかな 1
+ここかな 2
+ここかな 3
+unLoadedThumbnailButton 1
+check i 0
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1349)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ 
+  [復元されました]
+Last login: Thu Dec 17 22:58:45 on console
+You have mail.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8825
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@20224c66
+1 is sun.awt.CGraphicsDevice@2bc5cd05
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+UseShot.pde:533:0:533:0: NullPointerException
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8552
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 7
+run console
+check i 0 : a のコピー 2.png
+check i 1 : a のコピー 3.png
+check i 2 : a のコピー 4.png
+check i 3 : a のコピー.png
+check i 4 : a.png
+check i 5 : 
+check i 6 : 
+作成 0 a のコピー 2.png
+0 /Users/kawasemi/Desktop/dsdData/a のコピー 2.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1349)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/output --force
+Listening for transport dt_socket at address: 8997
+Display 2 does not exist, using the default display instead.
+0 is sun.awt.CGraphicsDevice@2bc5cd05
+1 is sun.awt.CGraphicsDevice@471719b6
+SimpleOpenNI Version 1.96
+3ツールバーの隙間をうめる
+4ツールバーの隙間をうめる
+ツールバーおわり
+Can't open the depthMap, maybe the camera is not connected!
+Can't open the rgbMap, maybe the camera is not connected or there is no rgbSensor!
+読み込みに失敗しました。
+/Applications/Processing.app/Contents/Java/sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/UseShot/data/todai_horiken7.dsd
+は存在しません。
+p 7
+run console
+check i 0 : a のコピー 2.png
+check i 1 : a のコピー 3.png
+check i 2 : a のコピー 4.png
+check i 3 : a のコピー.png
+check i 4 : a.png
+check i 5 : 
+check i 6 : 
+作成 0 a のコピー 2.png
+0 /Users/kawasemi/Desktop/dsdData/a のコピー 2.png
+作成 1 a のコピー 3.png
+1 /Users/kawasemi/Desktop/dsdData/a のコピー 3.png
+java.lang.RuntimeException: java.lang.NullPointerException
+	at com.jogamp.common.util.awt.AWTEDTExecutor.invoke(AWTEDTExecutor.java:58)
+	at jogamp.opengl.awt.AWTThreadingPlugin.invokeOnOpenGLThread(AWTThreadingPlugin.java:103)
+	at jogamp.opengl.ThreadingImpl.invokeOnOpenGLThread(ThreadingImpl.java:206)
+	at javax.media.opengl.Threading.invokeOnOpenGLThread(Threading.java:172)
+	at javax.media.opengl.Threading.invoke(Threading.java:191)
+	at javax.media.opengl.awt.GLCanvas.display(GLCanvas.java:541)
+	at processing.opengl.PJOGL.requestDraw(PJOGL.java:688)
+	at processing.opengl.PGraphicsOpenGL.requestDraw(PGraphicsOpenGL.java:1651)
+	at processing.core.PApplet.run(PApplet.java:2256)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at processing.core.PGraphics.image(PGraphics.java:3593)
+	at processing.core.PApplet.image(PApplet.java:12783)
+	at UseShot$Data.update(UseShot.java:1349)
+	at UseShot.draw(UseShot.java:173)
+	at processing.core.PApplet.handleDraw(PApplet.java:2386)
+	at processing.opengl.PJOGL$PGLListener.display(PJOGL.java:862)
+	at jogamp.opengl.GLDrawableHelper.displayImpl(GLDrawableHelper.java:665)
+	at jogamp.opengl.GLDrawableHelper.display(GLDrawableHelper.java:649)
+	at javax.media.opengl.awt.GLCanvas$10.run(GLCanvas.java:1289)
+	at jogamp.opengl.GLDrawableHelper.invokeGLImpl(GLDrawableHelper.java:1119)
+	at jogamp.opengl.GLDrawableHelper.invokeGL(GLDrawableHelper.java:994)
+	at javax.media.opengl.awt.GLCanvas$11.run(GLCanvas.java:1300)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:302)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:733)
+	at java.awt.EventQueue.access$200(EventQueue.java:103)
+	at java.awt.EventQueue$3.run(EventQueue.java:694)
+	at java.awt.EventQueue$3.run(EventQueue.java:692)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:703)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:242)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:161)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:150)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:146)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:138)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:91)
+Could not run the sketch (Target VM failed to initialize).
+For more information, read revisions.txt and Help → Troubleshooting.
+Could not run the sketch.
+Finished.
+kawasemiPC-2:~ kawasemi$ 
