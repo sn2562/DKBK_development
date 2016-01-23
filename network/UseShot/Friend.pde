@@ -31,9 +31,9 @@ public class Friend {
     rotateY(data.get(tool.nowDataNumber).rotZ);
     scale(0.575f*width/img.width);
     translate(0, 0, -1000);
-    translate(data.get(tool.nowDataNumber).pos.x, data.get(tool.nowDataNumber).pos.y, data.get(tool.nowDataNumber).pos.z);
+    //translate(data.get(tool.nowDataNumber).pos.x, data.get(tool.nowDataNumber).pos.y, data.get(tool.nowDataNumber).pos.z);
     //通信者ごとの適当な場所への変移分の移動
-    translate(pos.x, pos.y, pos.z);
+    //translate(pos.x, pos.y, pos.z);
 
     //描画部分
     noFill();

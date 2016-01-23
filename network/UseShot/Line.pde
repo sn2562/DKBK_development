@@ -87,6 +87,7 @@ public class Line extends DT implements Serializable {
     //これはペンモードの場合のみ動かしたい//ペンBの時もやる
     if (tool.nowToolNumber==0||tool.nowToolNumber==1) {
       if (size()==3) {
+        println("変更前 : "+get(size()-2));
         p1.set(get(size()-2));//p1に二番目を保存する
 
         //平均を取る
@@ -95,14 +96,19 @@ public class Line extends DT implements Serializable {
         pz=(get(size()-3).z+get(size()-1).z)/2;
 
         get(size()-2).set(px, py, pz);//値を書き換える
+        
+        println("変更後 : "+get(size()-2));
       } else if (size()>3) {
         //p1を使って先に平均をとる
+        println("変更前 : "+get(size()-2));
         px=(p1.x+get(size()-1).x)/2;//配列の一番最後の点と比較
         py=(p1.y+get(size()-1).y)/2;
         pz=(p1.z+get(size()-1).z)/2;
 
         p1.set(get(size()-2));//p1に新しい値を保存しておく
         get(size()-2).set(px, py, pz);//値を書き換える
+        
+        println("変更後 : "+get(size()-2));
       }
     }
 

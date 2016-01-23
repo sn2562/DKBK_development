@@ -557,8 +557,6 @@ class SecondApplet extends PApplet {
 
 		if(!MainFrame)
 			pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
-
-
 	}
 
 	void console(String[] fileArray){
