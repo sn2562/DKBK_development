@@ -1,5 +1,8 @@
 //processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/network/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/network/UseShot/output --force
 
+
+import SimpleOpenNI.*;
+
 //二画面用
 private PFrame data_frame;
 private SecondApplet second_app;
@@ -8,10 +11,6 @@ boolean MainFrame = true;//二画面のうちどちらにいるか
 int SecondAppletW=200;
 int SecondAppletH=600;
 ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();//サムネイルボタン
-
-//更新のじどうか
-import SimpleOpenNI.*;
-//changed 20150906z
 
 String FilePath1;//始めにロードするデータとLキー押した時に読むデータのパスを入れ解くためのやつ(debug用)
 boolean debugMode=false;//デバックモードがtrue時は自動的に上記のファイルをロードする。
@@ -64,7 +63,7 @@ void setup() {
 	context = new SimpleOpenNI(this);//カメラ更新用
 	context.setMirror(false);//鏡では表示しない
 
-	frame.setTitle("DKBK");
+	//	frame.setTitle("DKBK");
 	size(int(640*screenZoom), int(480*screenZoom), P3D);
 
 	//線の太さ、初期設定は3
@@ -73,7 +72,6 @@ void setup() {
 	FilePath1=dataPath("")+"/todai_horiken7.dsd";
 
 	tool=new Tool();//ツールバー
-
 	take=new TakeShot(this);//テイクショット
 
 	//初期データの読み込み
@@ -91,6 +89,7 @@ void setup() {
 
 	pmousePressed=false;
 
+	myclient = new MyClient(this);
 
 
 	//データ画面
@@ -102,7 +101,14 @@ void setup() {
 }
 
 void draw() {
-	frame.setTitle(data.get(tool.nowDataNumber).dataname+" "+round(frameRate));//
+	//	frame.setTitle(data.get(tool.nowDataNumber).dataname+" "+round(frameRate));//
+
+	//通信
+	frame.setTitle(String.format("DKBK speed:%03d/100 ID:%d member:%d", 
+								 round(100*frameRate/60), 
+								 myclient.client_id, 
+								 myclient.friends.size()));
+
 	//フレームの計算
 	if (tool.animMode()) {
 		//アニメーション用フレームレート
@@ -112,7 +118,7 @@ void draw() {
 
 		//tool.nowDataNumberを変更する
 		tool.nowDataNumber=frameset%data.size();
-		//println(frameset+":"+tool.moveWriter);
+		println(frameset+":"+tool.moveWriter);
 
 		//表示するデータを変更する draw_modeは0~3
 		for (int i=0; i<data.size (); i++) {
@@ -126,6 +132,8 @@ void draw() {
 	tool.update();//ツールバーを更新
 
 	background(252, 251, 246);//キャンバス背景色
+	myclient.update();//通信用のクライアントを更新
+
 	if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
 		data.get(tool.nowDataNumber).draw();//線を描く
 
@@ -621,7 +629,7 @@ class SecondApplet extends PApplet {
 
 	//マウスホイールによって画面をスクロールする
 	void mouseWheel(java.awt.event.MouseWheelEvent event) {
-//		float e = event.getCount();
+		//		float e = event.getCount();
 		float e = event.WHEEL_UNIT_SCROLL;
 		scrollY=scrollY+e;
 	}

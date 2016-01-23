@@ -1,433 +1,704 @@
-//2015.04.29 tomohiro
-//更新のじどうか
+//processing-java --run --force --sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/network/UseShot --output=sketch=/Users/kawasemi/Documents/processing2014/DKBK_development/network/UseShot/output --force
+
+
 import SimpleOpenNI.*;
 
-String FilePath1, FilePath2;//始めにロードするデータとLキー押した時に読むデータのパスを入れ解くためのやつ(debug)
-boolean debugMode=true;//デバックモード時は自動的に上記のファイルをロードする。
-static boolean PCMode=true;//macの時...true
+//二画面用
+private PFrame data_frame;
+private SecondApplet second_app;
+
+boolean MainFrame = true;//二画面のうちどちらにいるか
+int SecondAppletW=200;
+int SecondAppletH=600;
+ArrayList <ImButton> thumbnailButton = new ArrayList<ImButton>();//サムネイルボタン
+
+String FilePath1;//始めにロードするデータとLキー押した時に読むデータのパスを入れ解くためのやつ(debug用)
+boolean debugMode=false;//デバックモードがtrue時は自動的に上記のファイルをロードする。
+
+String Savepath="/Users/kawasemi/Desktop/dsdData/";//mac版 保存場所およびロード場所
+
 
 final int K=2;//深度データ描写の細かさ
-final int LENGTH=1145;
+final int LENGTH=1145;//デプスデータを格納している配列の大きさ
 final int data_width=640;//画像の解像度
 final int data_height=480;//画像の解像度
 
-final float screenZoom=1.5;//1.8;//描画範囲の調節用//1.5普段使い//1.2//微調整用
+final float screenZoom=1.3;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
 
-private TakeShot take;
-private Tool tool;
+private TakeShot take;//データの保存に利用
+private Tool tool;//ツールバー
 private boolean pmousePressed;
 
-static ArrayList<Data> data;
+static ArrayList<Data> data;//扱っているデータを格納しておく場所
 
 static int setLineW;//線の太さ
-static boolean penMode=true;//ペンモード trueは普通ペン、falseは青ペン
-
 static int animFrame;//フレームレートに沿ったフレーム数
 static int frameset;//
 static boolean animation;//アニメーションしてもいいかどうか
-static int animMode;//アニメーションするときの表示方法を保存しておく
 static int framecount=5;//設定するフレームカウント
+
+boolean mergeMode = false;
+boolean showTestMerge=false;
+
+private int margesketch1 = 0;
+private int margesketch2 = 0;
 
 SimpleOpenNI context;//カメラ更新用
 static int oldToolNumber;
+PVector OAm, OBm, OCm;
 
 String getParentFilePath(String path, int n) {//n階層上のファイルパスを取得
-  File f=new File(path);
-  for (int i=0; i<n; i++)
-    f=f.getParentFile();
-  return f.getAbsolutePath();
+	File f=new File(path);
+	for (int i=0; i<n; i++)
+		f=f.getParentFile();
+	return f.getAbsolutePath();
 }
 
 void setup() {
-  animFrame=frameset=0;
-  animation=false;
+	animFrame=frameset=0;
+	animation=false;
 
-  oldToolNumber=0;
-  context = new SimpleOpenNI(this);//カメラ更新用
-  // mirror is by default enabled
-  context.setMirror(true);
-  // enable depthMap generation 
-  //  context.enableDepth();
-  // enable ir generation
-  //  context.enableRGB();
-  context.setMirror(false);//鏡では表示しない
 
-  frame.setTitle("DKBK");
-  //size(1152, 864, P3D);
-  float w=640*screenZoom;
-  float h=480*screenZoom;
-  size(int(w), int(h), P3D);
+	oldToolNumber=0;
+	context = new SimpleOpenNI(this);//カメラ更新用
+	context.setMirror(false);//鏡では表示しない
 
-  //線の太さ、初期設定は3
-  setLineW=7;
+	//	frame.setTitle("DKBK");
+	size(int(640*screenZoom), int(480*screenZoom), P3D);
 
-  //FilePath1=getParentFilePath(dataPath(""), 0)+"/TakeShot/data/yokoisanfront_2";
-  FilePath1=dataPath("")+"/todai_horiken7.dsd";
-  FilePath2=dataPath("")+"/todai_horiken7.dsd";
+	//線の太さ、初期設定は3
+	setLineW=7;
 
-  tool=new Tool();
-  take=new TakeShot(this);
+	FilePath1=dataPath("")+"/todai_horiken7.dsd";
 
-  tool.nowToolNumber=0;//ツール初期設定
+	tool=new Tool();//ツールバー
+	take=new TakeShot(this);//テイクショット
 
-  data=new ArrayList<Data>();
-  if (debugMode)
-    data.add(new Data(FilePath1));//デバック用のデータ読み込み
-  else
-    data.add(new Data(true));//空のデータを入れておく
+	//初期データの読み込み
+	data=new ArrayList<Data>();
+	if (debugMode)
+		data.add(new Data(FilePath1));//デバック用のデータ読み込み
+	else
+		data.add(new Data(true));//空のデータを入れておく
 
-  perspective(PI/4, float(width)/float(height), 10, 150000);//視野角は45度
-  float z0 = (height/2)/tan(PI/8);//tan(radian(45/2))を使うと、微妙に数字がズレるのでダメ
-  //カメラの位置を決める
-  camera(width/2, height/2, z0, width/2, height/2, 0, 0, 1, 0);
+	//表示について
+	perspective(PI/4, float(width)/float(height), 10, 150000);//視野角は45度
+	float z0 = (height/2)/tan(PI/8);//tan(radian(45/2))を使うと、微妙に数字がズレるのでダメ
+	//カメラの位置を決める
+	camera(width/2, height/2, z0, width/2, height/2, 0, 0, 1, 0);
 
-  printCamera();  
-  pmousePressed=false;
-  animMode=0;
+	pmousePressed=false;
 
-  myclient = new MyClient(this);
+	myclient = new MyClient(this);
+
+
+	//データ画面
+	second_app = new SecondApplet();
+	data_frame = new PFrame(second_app);
+	data_frame.setTitle("data");
+	data_frame.setLocation(1200, 200);
+
 }
 
 void draw() {
-//  frame.setTitle("DKBK "+round(frameRate) + " " + myclient.client_id + " " + myclient.friends.size());//
-  frame.setTitle(String.format("DKBK speed:%03d/100 ID:%d member:%d", 
-  round(100*frameRate/60), 
-  myclient.client_id, 
-  myclient.friends.size()));
-  //フレームの計算
-  if (tool.animMode()) {
-    //アニメーション用フレームレート
-    animFrame++;
-    frameset=(animFrame-1)/framecount;
-    //表示するデータ番号を出力
+	//	frame.setTitle(data.get(tool.nowDataNumber).dataname+" "+round(frameRate));//
 
-    //tool.nowDataNumberを変更する
-    tool.nowDataNumber=frameset%data.size();
-    println(frameset+":"+tool.moveWriter);
+	//通信
+	frame.setTitle(String.format("DKBK speed:%03d/100 ID:%d member:%d", 
+								 round(100*frameRate/60), 
+								 myclient.client_id, 
+								 myclient.friends.size()));
 
-    //表示するデータを変更する draw_modeは0~3
-    for (int i=0; i<data.size (); i++) {
-      if (i==tool.nowDataNumber)//選択中のデータならば
-        data.get(i).draw_mode=2;//0番の表示方法にあわせて表示
-      else//それ以外
-      data.get(i).draw_mode=3;//非表示
-    }
-  }
+	//フレームの計算
+	if (tool.animMode()) {
+		//アニメーション用フレームレート
+		animFrame++;
+		frameset=(animFrame-1)/framecount;
+		//表示するデータ番号を出力
 
-  tool.update();//ツールバーを更新
-  background(252, 251, 246);//キャンバス背景色
-  myclient.update();//通信用のクライアントを更新
-  //if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
-  //data.get(tool.nowDataNumber).draw();//線を描く
+		//tool.nowDataNumberを変更する
+		tool.nowDataNumber=frameset%data.size();
+		println(frameset+":"+tool.moveWriter);
 
-  //data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
+		//表示するデータを変更する draw_modeは0~3
+		for (int i=0; i<data.size (); i++) {
+			if (i==tool.nowDataNumber)//選択中のデータならば
+				data.get(i).draw_mode=1;//0番の表示方法にあわせて表示
+			else//それ以外
+				data.get(i).draw_mode=3;//非表示
+		}
+	}
 
-  if (tool.getMode()) {//カメラモードでなければ
-    context.update();//カメラ更新用
-    //data内のデータを書き換える
-    // data.get(tool.nowDataNumber).cameraChangeUpdate();
-    //todo
-    //useshot系データの描画
-    for (int i=0; i<data.size (); i++) {//各種データの操作と描画
-      data.get(i).update();
-      //もし青ペンなら更新する
-      //if (tool.nowToolNumber!=0&&tool.nowToolNumber!=4) {
-      if (tool.nowToolNumber==1) {
-        //        take.draw();
-        //        take.save();//更新する
-      }
+	tool.update();//ツールバーを更新
 
-      if (tool.getMovMode()) {
-      } else {
-        take.draw();
-        take.save();//更新する
-      }
-    }
-  } else {
-    //takeshot系データの描画
-    take.draw();
-  }
+	background(252, 251, 246);//キャンバス背景色
+	myclient.update();//通信用のクライアントを更新
 
-  tool.draw();//ツールバーを描画
+	if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
+		data.get(tool.nowDataNumber).draw();//線を描く
 
-  pmousePressed=mousePressed;
+	if (tool.getMode()) {//trueでUseShotMode,falseでTakeShotMode
+		context.update();//カメラ更新用
+		//data内のデータを書き換える
+		// data.get(tool.nowDataNumber).cameraChangeUpdate();
+		//todo
+		//useshot系データの描画
+		for (int i=0; i<data.size (); i++) {//各種データの操作と描画
+			if(!mergeMode){//マージモードオフの時はデータそれぞれの描画をアップデートする
+				data.get(i).update();			
+			}else{//マージオンの時は指定データのみをそれぞれアップデートする
+				data.get(margesketch1).update();
+				data.get(margesketch2).update();
+			}if (tool.getMovMode()) {//trueで静止画モード,falseで動画モード
+			} else {
+				take.draw();
+				take.save();//更新する
+			}
+		}
+	} else {//takeshot
+		take.draw();
+	}
+
+	tool.draw();//ツールバーを描画
+
+	if(MainFrame)
+		pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
 }
 
 void mousePressed() {
-  //検証用
-  //  println(tool.nowToolNumber);
+	//切り替え
 
-  //切り替え
+	//線の太さをペンのボタンで変更する
+	setLineW=13;//それ以外は細く
 
-  //線の太さをペンのボタンで変更する
-  if ( mouseButton == RIGHT ) //右ボタンが押されたときに太さを変更する
-    setLineW=13;//右クリックしている時は太く
-  else
-    setLineW=13;//それ以外は細く
+	if (tool.getMode()) {
+		if (!tool.pointOver(mouseX, mouseY)) {//ツールバーに重なってないのなら
+			if(!mergeMode)
+				data.get(tool.nowDataNumber).addLine();//線を追加
+			else{//マージモードなら
+				int num = data.get(tool.nowDataNumber).pointNum;
+				println("PCanvas "+num+" "+data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY));
+				if (num<3) {
+					data.get(tool.nowDataNumber).points[data.get(tool.nowDataNumber).pointNum]=data.get(tool.nowDataNumber).PCanvas(mouseX, mouseY);
+					data.get(tool.nowDataNumber).pointNum++;
+					//data.get(nowDataNumber).addPoint(mouseX, mouseY);
+				} else if (num==3) {
+					//三点のリセット
+					for (int i=0; i<3; i++) {
+						data.get(tool.nowDataNumber).points[i]=new PVector(0, 0, 0);
+					}
+					data.get(tool.nowDataNumber).pointNum=0;
+				}
+				println("mousePressed end");
+			}
 
-  if (tool.getMode()) {
-    if (!tool.pointOver(mouseX, mouseY)) {//ツールバーに重なってないのなら
-      data.get(tool.nowDataNumber).addLine();//線を追加
-      //if ( mouseButton == RIGHT )//右クリックなら直線を描く用の始点を追加
-      //data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
-    }
-  } else {//ツールバーに重なっていたら
-    take.mousePressed();
-  }
+		}
+	} else {//ツールバーに重なっていたら
+		take.mousePressed();
+	}
 
-  if (tool.pointOver(mouseX, mouseY)) {//ツールバーに重なっている時
-    //println("重なってる");
-    /*
-    if (oldToolNumber==tool.nowToolNumber) {//もし複数回クリックならば
-     println("複数回クリック:number"+oldToolNumber);
-     //data.get(tool.nowDataNumber).changeDrawMode();
-     }
-     */
-  }
+	if (tool.pointOver(mouseX, mouseY)) {//ツールバーに重なっている時
+	}
 }
 
 void mouseReleased() {
-  //値を更新する
-  //oldToolNumber=tool.nowToolNumber;
-  // println("更新しました"+oldToolNumber+" "+tool.nowToolNumber);
-
-  //直線を描く
-  if (tool.getMode()) {
-    if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
-      switch(tool.nowToolNumber) {
-      case 0://補正ペン
-        /*
-        println("直線");
-         if ( mouseButton == RIGHT )
-         data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
-         */
-        break;
-      }
-  }
+	//回転操作をリセットする
+	if ( mouseButton == RIGHT ) {
+		if (!tool.moveWriter)
+			data.get(tool.nowDataNumber).matrixReset();
+		else
+			tool.matrixReset();
+	}
 }
 
 void keyReleased(java.awt.event.KeyEvent e) {
-  if (tool.getMode()) {
-    super.keyReleased(e);//keyCodeやらを更新するために必要
-    switch(e.getKeyCode()) {
-    case LEFT:
-    case UP:
-    case RIGHT:
-    case DOWN:
-    case '0'://do
-      //if (data.get(tool.nowDataNumber).moveAble())
-      //data.get(tool.nowDataNumber).updateMap();//移動ボタンを離した時に射影しなおす
-    }
-  }
+	if (tool.getMode()) {
+		super.keyReleased(e);//keyCodeやらを更新するために必要
+		switch(e.getKeyCode()) {
+			case LEFT:
+			case UP:
+			case RIGHT:
+			case DOWN:
+			case '0'://do
+			//if (data.get(tool.nowDataNumber).moveAble())
+			//data.get(tool.nowDataNumber).updateMap();//移動ボタンを離した時に射影しなおす
+		}
+	}
 }
 
 //マウスの操作
 void mouseDragged() {
 
-  if ( mouseButton == RIGHT ) //右ボタンが押されたときに太さを変更する
-    setLineW=12;//右クリックしている時は太く
-  else
-    setLineW=12;//それ以外は細く
+	if ( mouseButton == RIGHT ) //右ボタンが押されたときに太さを変更する
+		setLineW=12;//それ以外は細く
 
-  //ツールごとの設定
-  if (tool.getMode()) {
-    if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
-      switch(tool.nowToolNumber) {
-      case 0://補正ペン
-        //if ( mouseButton == RIGHT )
-        //println("直線");
-        //else
-        data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
-        break;
-      case 1://スプレー改
-        data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
-        break;
-      case 2://カッター
-        data.get(tool.nowDataNumber).cutLine(pmouseX, pmouseY, mouseX, mouseY);
-        break;
-      case 4://移動
-        println("移動ツール keyEvent:"+keyEvent);
-        //検証用2
-        if (keyEvent==null) {//起動直後
-          //回転か並行かを判定する
-          if (mouseButton == RIGHT) {
-            //1.shiftが押されているか右クリックなら平行移動
-            //平行移動
-            if (!tool.moveWriter) {
-              data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
-            } else {
-              tool.move(mouseX-pmouseX, mouseY-pmouseY);
-            }
-          } else {
-            //2.何もなしなら回転移動
-            //回転移動
-            if (!tool.moveWriter) {//全体移動
-              data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-            } else {//個々
-              tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-            }
-          }
-        } else if (keyEvent.isShiftDown()||mouseButton == RIGHT) {
-          //3.shiftが押されているか右クリックなら平行移動
-          //平行移動
-          if (!tool.moveWriter) {
-            data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
-          } else {
-            tool.move(mouseX-pmouseX, mouseY-pmouseY);
-          }
-        } else {//何もしないなら回転移動
-          //4.回転移動
-          if (!tool.moveWriter) {//全体移動
-            data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-          } else {//個々
-            tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-          }
-        }
-        /*
-        if (keyEvent==null||keyEvent.isShiftDown()||mouseButton == RIGHT) {//Shiftが押されているor右クリックなら移動。keyEvent==nullはキーボードが押されていなかった時をはじくための保険
-         //println("tool.moveWriter "+tool.moveWriter);
-         if (!tool.moveWriter) {
-         data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
-         } else {
-         tool.move(mouseX-pmouseX, mouseY-pmouseY);
-         }
-         } 
-         //if (true) {//Shiftが押されていない時は回転
-         else {
-         if (!tool.moveWriter) {//全体移動
-         data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-         } else {//個々
-         tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
-         }
-         }
-         */
-        /*
-          else if (keyEvent==null||keyEvent.isControlDown()) {//controlが押されているならz軸で回転。
-         if (!tool.moveWriter)//全体移動
-         data.get(tool.nowDataNumber).rotate(0, 0, radians(pmouseY-mouseY)/10);
-         else
-         tool.rotate(0, 0, radians(pmouseY-mouseY)/10);
-         } 
-         */
-
-        break;
-      }
-  }
+	if ( mouseButton == RIGHT ) {//右クリックをしていたら
+		//閲覧操作
+		//回転か並行かを判定する
+		if (!tool.moveMode) {
+			//1.shiftが押されているか右クリックなら平行移動
+			//平行移動
+			if (!tool.moveWriter) {
+				data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
+			} else {
+				tool.move(mouseX-pmouseX, mouseY-pmouseY);
+			}
+		} else {
+			//2.何もなしなら回転移動
+			//回転移動
+			if (!tool.moveWriter) {//全体移動
+				data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+			} else {//個々
+				tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+			}
+		}
+	} else {//それ以外
+		if(mergeMode) return;
+		//ツールごとの設定
+		if (tool.getMode()) {
+			if (!tool.isDragged&&!tool.isDragged2)//ツールバーに重なってないのなら
+				switch(tool.nowToolNumber) {
+				case 0://補正ペン
+				//println("tool.nowToolNumberを表示"+tool.nowToolNumber);
+				//if ( mouseButton == RIGHT )
+				//println("直線");
+				//else
+				data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
+				break;
+				case 1://スプレー改
+				data.get(tool.nowDataNumber).addPoint(mouseX, mouseY);
+				break;
+				case 2://カッター
+				data.get(tool.nowDataNumber).cutLine(pmouseX, pmouseY, mouseX, mouseY);
+				break;
+				case 4://移動
+				//移動量を出力
+				data.get(tool.nowDataNumber).printTR();
+				//検証用2
+				if (keyEvent==null) {//起動直後
+					//回転か並行かを判定する
+					if (!tool.moveMode) {
+						//1.shiftが押されているか右クリックなら平行移動
+						//平行移動
+						if (!tool.moveWriter) {
+							data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
+						} else {
+							tool.move(mouseX-pmouseX, mouseY-pmouseY);
+						}
+					} else {
+						//2.何もなしなら回転移動
+						//回転移動
+						if (!tool.moveWriter) {//全体移動
+							data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+						} else {//個々
+							tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+						}
+					}
+				} else if (keyEvent.isShiftDown()||!tool.moveMode) {
+					//3.shiftが押されているか右クリックなら平行移動
+					//平行移動
+					if (!tool.moveWriter) {
+						data.get(tool.nowDataNumber).move(mouseX-pmouseX, mouseY-pmouseY);
+					} else {
+						tool.move(mouseX-pmouseX, mouseY-pmouseY);
+					}
+				} else {//何もしないなら回転移動
+					//4.回転移動
+					if (!tool.moveWriter) {//全体移動
+						data.get(tool.nowDataNumber).rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+					} else {//個々
+						tool.rotate(radians(pmouseX-mouseX)/10, radians(pmouseY-mouseY)/10, 0);
+					}
+				}
+				break;
+			}
+		}
+	}
 }
 
 //キーボードの操作
 public void keyPressed(java.awt.event.KeyEvent e) {
-  if (tool.getMode()) {
-    tool.shortCut(e.getKeyCode());
-    super.keyPressed(e);
-    int dx=0, dy=0;
-    switch(e.getKeyCode()) {//移動量を求める
-    case LEFT:
-      dx=-1;
-      break;
-    case RIGHT:
-      dx=+1;
-      break;
-    case UP:
-      dy=-1;
-      break;
-    case DOWN:
-      dy=+1;
-      break;
-    }
-    switch(e.getKeyCode()) {
-    case '0':
-      if (!tool.moveWriter)
-        data.get(tool.nowDataNumber).matrixReset();
-      else
-        tool.matrixReset();
-      break;
-    case LEFT:
-    case RIGHT:
-    case UP:
-    case DOWN://どれかの移動キーが押されているとき
-      println("いどう");
-      if (data.get(tool.nowDataNumber).moveAble()) {
-        if (!tool.moveWriter) {
-          if (e.isShiftDown()) {
-            data.get(tool.nowDataNumber).rotate(dx*PI/100, dy*PI/100, 0);
-          } else {
-            data.get(tool.nowDataNumber).move(dx*100, dy*100);
-            println("うごけー");
-          }
-        } else {
-          if (e.isShiftDown())
-            tool.rotate(dx*PI/100, dy*PI/100, 0);
-          else
-            tool.move(dx*100, dy*100);
-        }
-      }
-      break;
-    case DELETE://全消し
-      data.get(tool.nowDataNumber).clear();
-      break;
-    case TAB://ツール表示しなおし
-      tool.review();
-      break;
-    case 'S'://データの描画モードを変更
-      data.get(tool.nowDataNumber).changeDrawMode();
-      println("描画を変更 "+data.get(tool.nowDataNumber).draw_mode);
-      break;
-    case 'L'://ロード(debug用)
-      if (debugMode&&data.size()==1)
-        data.add(new Data(FilePath2));
-      break;
-    case 'P'://データをpcdとして書き出す
-      println("make pcd data");
-      break;
+	if (tool.getMode()) {
+		tool.shortCut(e.getKeyCode());
+		super.keyPressed(e);
+		int dx=0, dy=0;
+		switch(e.getKeyCode()) {//移動量を求める
+			case LEFT:
+			dx=-1;
+			break;
+			case RIGHT:
+			dx=+1;
+			break;
+			case UP:
+			dy=-1;
+			break;
+			case DOWN:
+			dy=+1;
+			break;
+		}
+		switch(e.getKeyCode()) {
+			case '0':
+			if (!tool.moveWriter)
+				data.get(tool.nowDataNumber).matrixReset();
+			else
+				tool.matrixReset();
 
-    case'T'://データの撮影
-      println("takeShot!");
-      take.save();
-      break;
+			if(showTestMerge){
+				showTestMerge=!showTestMerge;
+				mergeMode = !mergeMode;
+			}
+			break;
+			case LEFT:
+			case RIGHT:
+			case UP:
+			case DOWN://どれかの移動キーが押されているとき
+			println("いどう");
+			if (data.get(tool.nowDataNumber).moveAble()) {
+				if (!tool.moveWriter) {
+					if (e.isShiftDown()) {
+						data.get(tool.nowDataNumber).rotate(dx*PI/100, dy*PI/100, 0);
+					} else {
+						data.get(tool.nowDataNumber).move(dx*100, dy*100);
+						println("うごけー");
+					}
+				} else {
+					if (e.isShiftDown())
+						tool.rotate(dx*PI/100, dy*PI/100, 0);
+					else
+						tool.move(dx*100, dy*100);
+				}
+			}
+			break;
+			case DELETE://全消し
+			data.get(tool.nowDataNumber).clear();
+			break;
+			case TAB://ツール表示しなおし
+			tool.review();
+			break;
+			case 'S'://データの描画モードを変更
+			data.get(tool.nowDataNumber).changeDrawMode();
+			println("描画を変更 "+data.get(tool.nowDataNumber).draw_mode);
+			break;
+			case 'L'://ロード(debug用)
+			if (debugMode&&data.size()==1)
+				data.add(new Data(FilePath1));
+			break;
+			case 'P'://データをpcdとして書き出す
+			println("make pcd data");
+			printPCD();
+			//data.get(tool.nowDataNumber).saveJsonData();
+			data.get(tool.nowDataNumber).saveJsonArrayData();
 
-    case'A'://アニメーション
-      animation=!animation;
-      println("animationの切り替え animation:"+animation);
-      //println("");
-      break;
-    case '1'://線の太さを変える
-      setLineW=3;
-      println("Line : 1");
-      break;
-    case '2':
-      setLineW=5;
-      println("Line : 2");
-      break;
-    case '3':
-      setLineW=7;
-      println("Line : 3");
-      break;
-    case '4':
-      setLineW=9;
-      println("Line : 4");
-      break;
-    case '5':
-      setLineW=11;
-      println("Line : 5");
-      break;
-    case '6':
-      setLineW=13;
-      println("Line : 6");
-      break;
+			break;
 
-    case '8':
-      data.get(tool.nowDataNumber).undo();
-      break;
+			case'T'://データの撮影
+			println("takeShot!");
+			take.save();
+			break;
 
-    case '9':
-      data.get(tool.nowDataNumber).redo();
-      break;
+			case'A'://アニメーション
+			animation=!animation;
+			println("animationの切り替え animation:"+animation);
+			//println("");
+			break;
+			//			case '1'://線の太さを変える
+			//			setLineW=3;
+			//			println("Line : 1");
+			//			break;
+			//			case '2':
+			//			setLineW=5;
+			//			println("Line : 2");
+			//			break;
+			//			case '3':
+			//			setLineW=7;
+			//			println("Line : 3");
+			//			break;
+			//			case '4':
+			//			setLineW=9;
+			//			println("Line : 4");
+			//			break;
+			//			case '5':
+			//			setLineW=11;
+			//			println("Line : 5");
+			//			break;
+			//			case '6':
+			//			setLineW=13;
+			//			println("Line : 6");
+			//			break;
+
+			case '8':
+			data.get(tool.nowDataNumber).undo();
+			break;
+
+			case '9':
+			data.get(tool.nowDataNumber).redo();
+			break;
+
+			case 'M'://merge mode
+			mergeMode=!mergeMode;
+			break;
+
+			case 'B':
+			showMergeView();
+			break;
 
 
-    default:
-      break;
-    }
-  }
+			default:
+			break;
+		}
+	}
 }
 
+public void printPCD() {
+	println("printPCD");
+	StringList l = new StringList();
+	int linenum=0;
+	//pcl用のヘッダを追加
+	l.append("VERSION .7");
+	l.append("FIELDS x y z rgb");
+	l.append("SIZE 4 4 4 4");
+	l.append("TYPE F F F F");
+	l.append("COUNT 1 1 1 1");
+	/*
+       l.append("WIDTH "+str(data_width/2));
+   l.append("HEIGHT "+str(data_height/2));
+   */
+	l.append("WIDTH 1");
+	l.append("HEIGHT 1");
+	l.append("VIEWPOINT 0 0 0 1 0 0 0");
+	l.append("POINTS 0");
+	l.append("DATA ascii");
+
+	//realWorldPointの中身をすべて出力
+	int W=data.get(tool.nowDataNumber).getW();//データの幅
+	int H=data.get(tool.nowDataNumber).getH();//データの高さ
+	for (int y=0; y < H; y+=3) {//3ずつ読み込み
+		for (int x=0; x < W; x+=3) {//3ずつ読み込み
+			int index = x + y * W;//インデックスを計算する
+			PVector realWorldPoint = data.get(tool.nowDataNumber).getVector(index);//realWorldMap_backのindexの値を取得する
+			if (realWorldPoint.z > 0) {//もしポイントのｚの値が0以上なら
+				linenum++;//linenumを1増やす
+				l.append(str(realWorldPoint.x)+" "+str(realWorldPoint.y)+" "+str(realWorldPoint.z)+" "+"4.2108e+06");//値のx座標,y座標,z座標,色情報を書き込む
+			}
+		}
+	}
+
+	for (int i=linenum; linenum!=data_width*data_height/4; linenum++) {
+		l.append("");
+	}
+	l.set(5, "WIDTH "+linenum);//5行目に行数を書く
+	l.set(8, "POINTS "+linenum);//8行目にポイント数の合計を書く
+
+	saveStrings("data/PointCroudData.pcd", l.array());//pcdデータの書き出し
+	saveStrings("data/PointCroudData.txt", l.array());//txtデータの書き出し(確認用)
+	println("end : printPCD");
+	return;
+}
+void mouseMoved() {//チェック
+	MainFrame=true;
+}
+
+//サムネイルの追加
+void addThumbnail(PImage g){
+	//TODO : closeの時は追加しない
+	if (thumbnailButton.size()==1&&tool.nowDataNumber==0){
+
+	};
+	println("ボタンを追加");
+	PImage p;
+	try {
+		p = (PImage)g.clone();  // データの実体のコピー
+		p.resize(0,100);//画像のリサイズ
+		thumbnailButton.add(new ImButton(p, (SecondAppletW-p.width)/2, thumbnailButton.size()*100));
+	} catch (Exception e) {
+		// 例外処理
+	}
+}
+
+//データ画面
+class SecondApplet extends PApplet {
+	//サムネイル表示用
+	String path = "/Users/kawasemi/Desktop/dsd";//データが格納されているフォルダのパス
+	FileList p;//フォルダの中身一覧
+	int imgNum = 0;//画像数
+	float scrollY=0;//スクロール量
+	//	int(480*screenZoom)
+
+	//新しいデータを追加するボタン
+	private Button addData;
+
+	void setup() {
+		//		size( SecondAppletW, SecondAppletH );
+		size( SecondAppletW, int(480*screenZoom) );
+		p = new FileList(path);
+		println("p "+p.getFileList().length);
+		//		console(p.getFileList());
+	}
+
+	void draw() {
+		if(mergeMode)
+			background(255,200,200);
+		else
+			background(255);
+
+		fill(255, 0, 0);
+		ellipse( mouseX, mouseY, 10, 10 );
+
+		//各種ボタン描画
+		//ホイール位置に合わせて描画位置を移動
+		pushMatrix();
+		translate(0,scrollY);
+
+		//選択中のデータの横に色を付けておく
+		fill(#40a5ac);
+		noStroke();
+		rect(20,100*tool.nowDataNumber,50,100);
+
+		for (int i=0; i<thumbnailButton.size(); i++){
+			//			thumbnailButton[i].draw(mouseX-getX(), mouseY-getY());
+			rect(thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());//ここの描画先を変更したい
+			image(thumbnailButton.get(i).getImg(), thumbnailButton.get(i).getX(), thumbnailButton.get(i).getY(), thumbnailButton.get(i).getW(), thumbnailButton.get(i).getH());
+		}
+		popMatrix();
+
+		update();
+
+		if(!MainFrame)
+			pmousePressed=mousePressed;//これをしておくことでマウスが一度だけ押されたのを取得する
+	}
+
+	void console(String[] fileArray){
+		if (fileArray != null) {
+			//画像の枚数をカウントする
+			for(int i = 0; i < fileArray.length; i++) {
+				if(match(fileArray[i], ".png") != null)
+					imgNum++;
+				//TODO : nullだった時(画像じゃない時)はその要素を配列から消しておきたい 
+			}
+			//画像付きボタンを作成する
+			//			thumbnailButton = new ImButton[imgNum];
+
+			imgNum=0;
+			//画像だった時にサムネイルを作成する
+			PImage g;
+
+			//イカの部分を追加される度に実行する部分にすればいい...
+			for(int i = 0; i < fileArray.length; i++) {//二度目
+				if(match(fileArray[i], ".png") != null){
+					//画像付きボタンを作成する
+					g=loadImage(path+"/"+fileArray[i]);//画像の読み込み
+					g.resize(0,100);//画像のリサイズ
+					thumbnailButton.add(new ImButton(g, (width-g.width)/2, imgNum*100));
+					imgNum++;
+				}
+			}
+		} else{
+			println("この階層には何もありません");
+		}
+	}
+
+	public void update() {//毎秒呼び出して画像がクリックされているかどうかをチェックする
+		//各種ボタンが押された時の処理
+		for (int i=0; i<thumbnailButton.size(); i++) {
+			if(MainFrame)//この画面じゃないならやらない
+				break;
+			thumbnailButton.get(i).update(mouseX-getX(), mouseY-getY()-scrollY);
+			if (thumbnailButton.get(i).isMouseOver&& !pmousePressed&&mousePressed) {
+				thumbnailButton.get(i).setSelected(false);
+				println(i+" : 押されました");
+
+				//ツール番号を変更する
+				//				int preNumber = tool.nowDataNumber;
+				int preDrawMode = data.get(tool.nowDataNumber).draw_mode;
+				tool.nowDataNumber=i;
+				margesketch2 = i;
+				//表示を新しい一枚に変更する draw_modeは0~3
+				for (int j=0; j<data.size (); j++) {
+					if (j==tool.nowDataNumber)//選択中のデータならば
+						data.get(j).draw_mode=preDrawMode;//表示
+					else//それ以外
+						data.get(j).draw_mode=3;//非表示
+				}
+
+
+
+				println("マージ元:0,マージ対象:"+i);
+			}
+		}
+	}
+
+	//マウスホイールによって画面をスクロールする
+	void mouseWheel(java.awt.event.MouseWheelEvent event) {
+		//		float e = event.getCount();
+		float e = event.WHEEL_UNIT_SCROLL;
+		scrollY=scrollY+e;
+	}
+
+	void mouseMoved() {//チェック
+		MainFrame=false;
+	}
+
+	boolean buttonMouseOver (){
+		return true;
+	}
+	public void keyPressed(java.awt.event.KeyEvent e) {
+		if (tool.getMode()) {
+			tool.shortCut(e.getKeyCode());
+			super.keyPressed(e);
+			switch(e.getKeyCode()) {//移動量を求める
+				case 'S'://データの描画モードを変更
+				data.get(tool.nowDataNumber).changeDrawMode();
+				println("描画を変更 "+data.get(tool.nowDataNumber).draw_mode);
+				break;
+
+				case 'M'://merge mode
+				mergeMode=!mergeMode;
+				break;
+			}
+		}
+
+	}
+}
+
+void showMergeView(){
+	int sketch1=margesketch1;//マージ元スケッチの番号
+	int sketch2=margesketch2;//変換されるスケッチの番号
+	println("マージ　："+sketch1+" + "+sketch2);
+
+	if (showTestMerge) {//表示設定担っている時はとりあえず非表示に設定する
+		println("非表示");
+		showTestMerge=false;
+		data.get(sketch2).changeSketchView =false;
+		data.get(sketch1).draw_mode=1;
+		data.get(sketch2).draw_mode=1;
+		showTestMerge=false;
+	}
+
+	if (data.get(sketch1).pointNum!=3 || data.get(sketch2).pointNum!=3) {//マージ用のポイントが揃っていなかったら中止
+		println("点の数が足りません");
+		return;
+	}
+	//両方表示する
+	showTestMerge=!showTestMerge;//両方表示する
+
+	if (showTestMerge) {//trueならば計算しなおして表示する
+		println("計算を開始します");
+
+		//軸にsketch1の軸を指定する
+		//calcChangePosition();
+		OAm=data.get(sketch1).calcChangeAxis()[0];
+		OBm=data.get(sketch1).calcChangeAxis()[1];
+		OCm=data.get(sketch1).calcChangeAxis()[2];
+		PVector []ttt = data.get(sketch2).calcChangeAxis();
+
+		println("OA "+OAm);
+		println("OB "+OBm);
+		println("OC "+OCm);
+
+		//マージするsketch2の表示方法を変更する
+		data.get(sketch2).changeSketchView = !data.get(sketch2).changeSketchView;
+		//表示方法をかえる
+		data.get(sketch1).draw_mode=2;
+		data.get(sketch2).draw_mode=2;
+	}
+}

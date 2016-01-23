@@ -56,7 +56,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 		//TODO : 自身をサムネイルボタンとして追加する
 		//thumbnailButton.append
 		println("サムネイルボタンを追加");
-		//addThumbnail(img);
+		addThumbnail(img);
 
 		//マージ用三点のリセット
 		for (int i=0; i<3; i++) {
