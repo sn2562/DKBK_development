@@ -226,12 +226,19 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 			lines.get(n).addAll(lines.remove(n+1));//前のと後ろのを結合
 		}
 		undo.add(0, lines.remove(lines.size()-1));
+		myclient.undo();
 	}
 	public void undo() {//やり直し
-		if (undo.size()>0)
-			lines.add(undo.remove(0));
+		if (undo.size()>0) {
+			DT l = undo.remove(0);
+			myclient.addLine(l.c, l.w);
+			for (PVector p : l)
+				myclient.addPoint(p);
+			lines.add(l);
+		}
 	}
 	public void clear() {//全消去
+		myclient.delete();
 		lines.clear();
 	}
 	public void undoclear() {
@@ -452,25 +459,32 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 	public void addLine() {//mousePressed時に呼ぶ
 		switch(tool.nowToolNumber) {
 			case 0://データとして線を追加
+			println("ツール番号 "+tool.getPenColorNum()+" ,ペン色番号"+tool.getPenColorNum());
 			if (tool.getPenColorNum()>1) {//color cがスポイトじゃないなら
 				lines.add(new Line(tool.getPenColor(), tool.getPenWeight()));//色をiconの色に変更
+				myclient.addLine(tool.getPenColor(), tool.getPenWeight());
 			} else if (tool.getPenColorNum()==0) {//写真スポイト
+				println("getPenColorの値"+tool.getPenColor());
 				tool.penColor[0]=img.get(
 					int(map(mouseX, 0, width, 0, img.width)), 
 					int(map(mouseY, 0, height, 0, img.height))
 				);
+				myclient.addLine(tool.getPenColor(), tool.getPenWeight());
 				lines.add(new Line(tool.getPenColor(), tool.getPenWeight()));
 			} else if (tool.getPenColorNum()==1) {//写真スポイト2.ランダム
+				println("5:getPenColorの値"+tool.getPenColor());
 				tool.penColor[1]=img.get(
 					int(random(0, img.width)), 
 					int(random(0, img.height))
 				);
+				myclient.addLine(tool.getPenColor(), tool.getPenWeight());
 				lines.add(new Line(tool.getPenColor(), tool.getPenWeight()));
 			}
 			undoclear();
 			break;
 			case 1://データとしてスプレーを追加->線を追加
 			//lines.add(new Spray(tool.getPenColor(), tool.getPenWeight()));
+			myclient.addLine(tool.getPenColor(), tool.getPenWeight());
 			lines.add(new Line(tool.getPenColor(), tool.getPenWeight()));
 			undoclear();
 			break;
@@ -678,6 +692,7 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 					println("太い線");
 				}
 			}
+			myclient.addPoint(p);
 			return p;
 		}
 		catch(Exception e) {

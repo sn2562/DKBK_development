@@ -280,8 +280,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 									data.remove(j--);
 									thumbnailButton.remove(0);//デフォルトデータの削除
 									for(int k=0;k<thumbnailButton.size();k++){
-										//thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
-										thumbnailButton.get(k).setPosition((0-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
+										thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
 									}
 								}
 							}
@@ -299,8 +298,7 @@ public class Tool extends Button {//ツールバー,ボタンをextendsしてる
 					data.remove(nowDataNumber);
 					thumbnailButton.remove(nowDataNumber);
 					for(int k=0;k<thumbnailButton.size();k++){
-						//thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
-						thumbnailButton.get(k).setPosition((0-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
+						thumbnailButton.get(k).setPosition((SecondAppletW-thumbnailButton.get(k).getW())/2, k*100);//サムネイルボタン位置の移動
 					}
 
 					if (data.size()==0){
