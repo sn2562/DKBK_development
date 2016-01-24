@@ -689,7 +689,6 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 					//細い線は手前にずらす
 					p.z=p.z-5;
 				} else {
-					println("太い線");
 				}
 			}
 			myclient.addPoint(p);
@@ -806,6 +805,8 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 			}
 
 			line.add(p);//線に点を追加
+			myclient.addPoint(p);//相手に位置を送信する
+
 		}
 		catch(Exception e) {
 			println(frameCount, x, y);
