@@ -92,6 +92,8 @@ boolean receiveData(Client client) {//次のデータを読み込む必要性が
 	if (input.length>1&&int(input[1])==-1)//IDが登録されていないクライアントからの送信の時
 		appearClient(client);
 
+	println("s :: 受け取った命令"+input[0]);
+
 	switch(order) {
 		case GETID://ID要求
 		appearClient(client);
@@ -107,14 +109,18 @@ boolean receiveData(Client client) {//次のデータを読み込む必要性が
 			println("NO ID USER");
 			break;
 		}
+		println("s:: オーダーはADDLINE");
+
 		usr.get(id).add(new Line());
 		writeExcept(client, receive);
+
 		break;
 		case POINT:
 		if (id==-1) {
 			println("NO ID USER");
 			break;
 		}
+		println("s:: オーダーはPOINT");
 		String pString[]=input[2].split(",");
 		PVector p=new PVector(float(pString[0]), float(pString[1]), float(pString[2]));
 		usr.get(id).get(usr.get(id).size()-1).add(p);
@@ -140,7 +146,15 @@ boolean receiveData(Client client) {//次のデータを読み込む必要性が
 			println("NO ID USER");
 			break;
 		}
-		usr.get(id).add(new Line());
+		println("s:: オーダーはADDIMAGE");
+		String iString[]=input[2].split(",");
+		println("　　画像データ"+iString[0]);
+
+
+		//		int[] wh=int(input[2].split(","));
+		//		usr.get(id).setImage(wh[0], wh[1], int(input[3].split(",")), float(input[4].split(",")));
+		//		usr.get(id).add(new Line());
+
 		writeExcept(client, receive);
 		break;
 	}

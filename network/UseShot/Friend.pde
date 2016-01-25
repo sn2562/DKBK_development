@@ -1,6 +1,7 @@
 import processing.net.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.nio.*;
 
 MyClient myclient;
 
@@ -174,6 +175,7 @@ public class MyClient {
 			case ADDIMAGE://受け取った側の処理
 			if (id==client_id)break;
 			//画像を置き換える
+			println("受け取った画像で置き換える");
 			friends.get(id).img.loadPixels();
 			friends.get(id).img.pixels = int(input[2].split(","));
 			friends.get(id).img.updatePixels();
@@ -204,15 +206,37 @@ public class MyClient {
 		write(Order.DELETE);
 	}
 
-	public void addImage(PImage image){//画像を送信する
+	public void addImage(PImage image,int [] depthMap){//画像を送信する
+		println("画像を送信 "+image.width+" "+image.height);
+		/*
 		String imgPixels = "";
-//		String imgPixels = image.pixels;
 		int dimension = image.width * image.height;
 		image.loadPixels();
+
+		//古いタイプ 直接文字列にしておくる
 		for(int i=0;i<dimension;i++){
-			imgPixels = image.pixels[i] + ",";
+			imgPixels = imgPixels + image.pixels[i] + ",";
 		}
-		write(Order.ADDIMAGE, imgPixels);
+//		println("送信文字列" + imgPixels);
+
+*/
+
+		//新しいタイプ　つらねくんのをまねっこ
+		//画像を送信
+		StringBuffer sbg=new StringBuffer();
+		image.loadPixels();
+		for(color c : image.pixels){
+			sbg.append(","+c);
+		}
+		//深度を送信
+//		image.loadPixels();
+		StringBuffer sbd=new StringBuffer();
+		for (int d : depthMap) {
+			sbd.append(","+d);
+		}
+		write(Order.DATA, image.width+","+image.height, sbg.substring(1), sbd.substring(1));
+
+//		write(Order.ADDIMAGE, imgPixels);
 	}
 }
 

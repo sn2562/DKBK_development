@@ -157,6 +157,8 @@ public class MyClient {
 			friends.get(id).lines.add(new Line(int(input[2]), int(input[3])));
 			break;
 			case POINT:
+			println(id + "cliant側POINT");
+			println(id + "追加しました");
 			if (id==client_id)break;
 			String pString[]=input[2].split(",");
 			PVector p=new PVector(float(pString[0]), float(pString[1]), float(pString[2]));
@@ -173,16 +175,10 @@ public class MyClient {
 			break;	
 			case ADDIMAGE://受け取った側の処理
 			if (id==client_id)break;
-			String pString[]=input[2].split(",");
-			//			for (int y = 0; y < img.height; y++) {
-			//				for (int x= 0; x < img.width; x++) {
-			//					int index = x+y*img.width;
-			//					imgPixels = imgPixels+img.pixels[index]+",";
-			//				}
-			//			}
-			for(int i=0;i<img.pixels.length;i++){
-				img.pixel[i] = float(pString[0]);
-			}
+			//画像を置き換える
+			friends.get(id).img.loadPixels();
+			friends.get(id).img.pixels = int(input[2].split(","));
+			friends.get(id).img.updatePixels();
 			break;
 			default:
 			break;
@@ -198,8 +194,9 @@ public class MyClient {
 	}
 
 	public void addPoint(PVector p) {
+		println("ポイントの送信");
 		write(Order.POINT, p.x+","+p.y+","+p.z);
-		img;
+		//		img;
 	}
 
 	public void undo() {
@@ -211,12 +208,13 @@ public class MyClient {
 	}
 
 	public void addImage(PImage image){//画像を送信する
+		println("画像の送信");
+
 		String imgPixels = "";
-		for (int y = 0; y < image.height; y++) {
-			for (int x= 0; x < image.width; x++) {
-				int index = x+y*image.width;
-				imgPixels = imgPixels+image.pixels[index]+",";
-			}
+		int dimension = image.width * image.height;
+		image.loadPixels();
+		for(int i=0;i<dimension;i++){
+			imgPixels = image.pixels[i] + ",";
 		}
 		write(Order.ADDIMAGE, imgPixels);
 	}

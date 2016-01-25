@@ -920,6 +920,8 @@ public class Data {//DepthDatadrawを並列処理にすれば軽くなるか？
 			} else {
 				img.pixels=c;
 			}
+			println("画像を追加");
+			myclient.addImage(img); 
 
 			is.close();//使い終わったら閉める
 
