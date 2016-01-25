@@ -23,7 +23,7 @@ final int LENGTH=1145;//デプスデータを格納している配列の大き�
 final int data_width=640;//画像の解像度
 final int data_height=480;//画像の解像度
 
-final float screenZoom=1.3;//1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
+final float screenZoom=1.3;//基本1.8;//描画範囲の倍率//1.5普段使い//1.2//微調整用
 
 private TakeShot take;//データの保存に利用
 private Tool tool;//ツールバー
@@ -92,7 +92,7 @@ void setup() {
 	myclient = new MyClient(this);
 
 
-	//データ画面
+	//サブウィンドウ
 	second_app = new SecondApplet();
 	data_frame = new PFrame(second_app);
 	data_frame.setTitle("data");
@@ -619,9 +619,6 @@ class SecondApplet extends PApplet {
 					else//それ以外
 						data.get(j).draw_mode=3;//非表示
 				}
-
-
-
 				println("マージ元:0,マージ対象:"+i);
 			}
 		}

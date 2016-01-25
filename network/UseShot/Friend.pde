@@ -36,6 +36,8 @@ public class Friend {
 		//translate(pos.x, pos.y, pos.z);
 
 		//描画部分
+		image(img, width/2, height/2);
+		//背景画像
 		noFill();
 		for (DT line : lines) {
 			stroke(line.c);
@@ -168,6 +170,13 @@ public class MyClient {
 			break;
 			case DELETE:
 			friends.get(id).lines.clear();
+			break;	
+			case ADDIMAGE://受け取った側の処理
+			if (id==client_id)break;
+			//画像を置き換える
+			friends.get(id).img.loadPixels();
+			friends.get(id).img.pixels = int(input[2].split(","));
+			friends.get(id).img.updatePixels();
 			break;
 			default:
 			break;
@@ -184,6 +193,7 @@ public class MyClient {
 
 	public void addPoint(PVector p) {
 		write(Order.POINT, p.x+","+p.y+","+p.z);
+		//		img;
 	}
 
 	public void undo() {
@@ -192,6 +202,17 @@ public class MyClient {
 
 	public void delete() {
 		write(Order.DELETE);
+	}
+
+	public void addImage(PImage image){//画像を送信する
+		String imgPixels = "";
+//		String imgPixels = image.pixels;
+		int dimension = image.width * image.height;
+		image.loadPixels();
+		for(int i=0;i<dimension;i++){
+			imgPixels = image.pixels[i] + ",";
+		}
+		write(Order.ADDIMAGE, imgPixels);
 	}
 }
 

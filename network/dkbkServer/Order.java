@@ -14,30 +14,31 @@
  NOTFOUND:Order.findで失敗したときに使っている保険。
  */
 enum Order {
-  ID, 
-  IN, 
-  OK, 
-  OUT, 
-  GETID, 
-  IMAGE, 
-  DATA, 
-  ADDLINE, 
-  POINT, 
-  TXT, 
-  UNDO, 
-  DELETE, 
-  NOTFOUND;
+	ID, 
+	IN, 
+	OK, 
+	OUT, 
+	GETID, 
+	IMAGE, 
+	DATA, 
+	ADDLINE, 
+	POINT, 
+	TXT, 
+	UNDO, 
+	DELETE, 
+	ADDIMAGE,
+	NOTFOUND;
 
-  //文字列をOrderに変換する。stringToOrderとかの名前とかの方がいいかも。
-  static public Order find(final String txt) {
-    //全てのOrderを探索
-    for (Order o : values ()) {
-      if (o.toString().equals(txt)) //一致するものがあったら
-        return o; //返す
-    }
+	//文字列をOrderに変換する。stringToOrderとかの名前とかの方がいいかも。
+	static public Order find(final String txt) {
+		//全てのOrderを探索
+		for (Order o : values ()) {
+			if (o.toString().equals(txt)) //一致するものがあったら
+				return o; //返す
+		}
 
-    //見つからなかったら失敗。
-    return NOTFOUND;
-  }
+		//見つからなかったら失敗。
+		return NOTFOUND;
+	}
 }
 
